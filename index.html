@@ -138,9 +138,9 @@ ul{margin:0;padding:0;list-style:none}
 .marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marquee-track{display:flex;width:max-content;gap:60px;align-items:center;animation:scroll 44s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
-.logo-item{font-family:var(--font-head);font-weight:800;font-size:21px;letter-spacing:.02em;color:#9a9285;white-space:nowrap;display:flex;align-items:center;gap:9px;filter:grayscale(1);opacity:.9;transition:color .2s ease,opacity .2s ease}
-.logo-item:hover{color:var(--ink);opacity:1}
-.logo-item .mk{color:var(--orange)}
+.logo-item{display:flex;align-items:center;justify-content:center;opacity:.66;transition:opacity .25s ease}
+.logo-item:hover{opacity:1}
+.logo-item img{max-height:42px;max-width:150px;width:auto;height:auto;display:block}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 30px))}}
 
 /* ---------- Problem ---------- */
@@ -413,14 +413,19 @@ ul{margin:0;padding:0;list-style:none}
   <p class="cap">Trusted by businesses across retail, e-commerce and consumer sectors</p>
   <div class="marquee">
     <div class="marquee-track" id="mtrack">
-      <span class="logo-item"><span class="mk">◆</span>Aurelia Silks</span>
-      <span class="logo-item"><span class="mk">●</span>Meraki Beauty</span>
-      <span class="logo-item"><span class="mk">▲</span>Kanaka Jewels</span>
-      <span class="logo-item"><span class="mk">■</span>Fresh &amp; Co.</span>
-      <span class="logo-item"><span class="mk">◆</span>Vastra Textiles</span>
-      <span class="logo-item"><span class="mk">●</span>Northline D2C</span>
-      <span class="logo-item"><span class="mk">▲</span>Bloom Foods</span>
-      <span class="logo-item"><span class="mk">■</span>Studio Kaya</span>
+      <span class="logo-item"><img src="images/clients/pothys.png" alt="Pothys" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/pachaiyappas-silks.png" alt="Pachaiyappas Silks" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/kankatala.png" alt="Kankatala" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/rangvarsha-sarees.png" alt="Rangvarsha Sarees" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/prashanthi-tradition-for-generations.png" alt="Prashanti Sarees" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/mahaveers.png" alt="Mahaveers — The Silk People" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/deiveegaa.png" alt="Deiveegaa" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/rani-arts-teak.png" alt="Rani Arts &amp; Teak" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/naturals.png" alt="Naturals" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/manna.png" alt="Manna" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/palmshore.png" alt="Palmshore" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/pmk-scans-labs.png" alt="PMK Scans &amp; Labs" loading="lazy"></span>
+      <span class="logo-item"><img src="images/clients/xlri.png" alt="XLRI" loading="lazy"></span>
     </div>
   </div>
 </section>
