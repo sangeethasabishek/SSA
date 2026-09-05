@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sangeetha S Abishek — Marketing Consultant</title>
+<meta name="description" content="Marketing audits, strategy and ongoing consulting for retail, e-commerce and consumer businesses. Request a 15-minute consultation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* ---------- Tokens (single, fixed light brand identity) ---------- */
+:root{
+  --white:#FFFFFF;
+  --ink:#111111;
+  --orange:#F97316;
+  --orange-dark:#EA660C;
+  --orange-soft:#FFF3EA;
+  --grey:#525252;
+  --wash:#F5F5F5;
+  --border:#E5E5E5;
+
+  --font-head:'Manrope','Segoe UI',system-ui,-apple-system,sans-serif;
+  --font-body:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+
+  --maxw:1200px;
+  --gutter:clamp(20px,5vw,64px);
+  --radius:10px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(17,17,17,.04),0 8px 24px rgba(17,17,17,.05);
+  --shadow-hover:0 2px 4px rgba(17,17,17,.05),0 14px 34px rgba(17,17,17,.09);
+  --header-h:72px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--white);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--font-head);margin:0;color:var(--ink);text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+
+/* ---------- Layout helpers ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(64px,9vw,112px)}
+.section--wash{background:var(--wash)}
+.section--dark{background:var(--ink)}
+.eyebrow{
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--orange);
+  margin:0 0 18px;
+}
+.section-head{max-width:760px;margin-bottom:clamp(36px,5vw,56px)}
+.section-head h2{font-size:clamp(30px,4.4vw,46px);font-weight:700;line-height:1.12}
+.section-head .lead{margin-top:20px;color:var(--grey);font-size:clamp(17px,1.6vw,19px);max-width:640px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-head);font-weight:600;font-size:16px;
+  padding:14px 24px;border-radius:var(--radius);
+  border:1.5px solid transparent;cursor:pointer;
+  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
+}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange-dark)}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-secondary:hover{background:var(--ink);color:#fff}
+.btn-ghost{padding:0;color:var(--ink);font-family:var(--font-head);font-weight:600;gap:7px}
+.btn-ghost .arrow{color:var(--orange);transition:transform .18s ease}
+.btn-ghost:hover .arrow{transform:translateX(4px)}
+.btn-lg{padding:16px 30px;font-size:17px}
+.on-dark.btn-secondary{color:#fff;border-color:rgba(255,255,255,.55)}
+.on-dark.btn-secondary:hover{background:#fff;color:var(--ink);border-color:#fff}
+.on-dark.btn-ghost{color:#fff}
+
+/* ---------- Header ---------- */
+.header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(140%) blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.header .wrap{display:flex;align-items:center;gap:24px;height:var(--header-h)}
+.brand{font-family:var(--font-head);font-weight:800;font-size:19px;letter-spacing:-.02em;white-space:nowrap}
+.brand .dot{color:var(--orange)}
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto}
+.nav a{font-size:15px;color:var(--ink);font-weight:500;transition:color .15s ease}
+.nav a:hover{color:var(--orange)}
+.header .btn{padding:11px 18px;font-size:15px}
+.nav-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--border);border-radius:8px;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer}
+.nav-toggle svg{width:22px;height:22px;stroke:var(--ink)}
+
+@media(max-width:1000px){
+  .nav{display:none}
+  .header .btn.header-cta{display:none}
+  .nav-toggle{display:flex}
+  .nav.open{
+    display:flex;flex-direction:column;align-items:flex-start;gap:4px;
+    position:absolute;left:0;right:0;top:var(--header-h);
+    background:#fff;border-bottom:1px solid var(--border);
+    padding:14px var(--gutter) 22px;margin:0;
+  }
+  .nav.open a{padding:10px 0;width:100%;border-bottom:1px solid var(--border)}
+  .nav.open .btn{display:inline-flex;margin-top:12px}
+}
+
+/* ---------- Hero ---------- */
+.hero{padding-block:clamp(48px,7vw,86px)}
+.hero-grid{display:grid;grid-template-columns:55fr 45fr;gap:clamp(32px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(38px,5.6vw,62px);font-weight:800;line-height:1.05;margin:18px 0 0}
+.hero .support{margin-top:24px;font-size:clamp(18px,1.7vw,20px);color:var(--grey);max-width:520px}
+.hero .add-line{margin-top:16px;font-size:16px;color:var(--grey);max-width:520px}
+.hero-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:34px}
+
+/* Placeholder image frame */
+.imgframe{
+  position:relative;background:var(--wash);border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;display:flex;flex-direction:column;
+  justify-content:flex-end;
+}
+.imgframe .ph-badge{
+  position:absolute;top:14px;left:14px;
+  font-family:var(--font-head);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--grey);background:#fff;border:1px solid var(--border);
+  border-radius:100px;padding:6px 12px;display:inline-flex;align-items:center;gap:7px;
+}
+.imgframe .ph-badge svg{width:13px;height:13px;stroke:var(--orange)}
+.imgframe .ph-caption{
+  padding:20px;color:var(--grey);font-size:14px;line-height:1.5;
+  background:linear-gradient(transparent,rgba(245,245,245,.9) 30%);
+}
+.imgframe .ph-caption strong{color:var(--ink);font-family:var(--font-head);display:block;margin-bottom:3px}
+.hero-img{aspect-ratio:4/5}
+
+/* ---------- Logo marquee ---------- */
+.marquee-sec{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-block:44px;background:#fff}
+.marquee-sec .cap{text-align:center;color:var(--grey);font-size:15px;margin-bottom:30px;padding-inline:var(--gutter)}
+.marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;width:max-content;gap:64px;animation:scroll 42s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.logo-item{
+  font-family:var(--font-head);font-weight:700;font-size:20px;letter-spacing:.01em;
+  color:#8a8a8a;white-space:nowrap;display:flex;align-items:center;gap:9px;
+  filter:grayscale(1);opacity:.85;transition:color .2s ease,opacity .2s ease}
+.logo-item:hover{color:var(--ink);opacity:1}
+.logo-item .mk{color:var(--orange)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 32px))}}
+
+/* ---------- Problem cards ---------- */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.qcard{
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+  padding:28px;transition:box-shadow .2s ease,transform .2s ease,border-color .2s ease}
+.qcard:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px);border-color:#dcdcdc}
+.qcard .qmark{
+  font-family:var(--font-head);font-weight:800;font-size:22px;color:var(--orange);
+  width:40px;height:40px;border-radius:9px;background:var(--orange-soft);
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.qcard p{font-family:var(--font-head);font-weight:600;font-size:19px;line-height:1.35;color:var(--ink)}
+.problem-intro{max-width:760px;margin-bottom:30px}
+.problem-intro .tags{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.problem-intro .tag{font-size:14px;color:var(--grey);border:1px solid var(--border);border-radius:100px;padding:6px 14px;background:#fff}
+.problem-intro .ask{font-family:var(--font-head);font-weight:700;font-size:clamp(22px,3vw,30px);color:var(--ink);margin-top:8px}
+.problem-close{
+  margin-top:32px;padding:26px 28px;border-left:3px solid var(--orange);
+  background:#fff;border-radius:0 var(--radius) var(--radius) 0;border-top:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border);
+  color:var(--grey);max-width:820px}
+.problem-close strong{color:var(--ink)}
+
+/* ---------- Numbers ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.stat .num{font-family:var(--font-head);font-weight:800;font-size:clamp(44px,6vw,64px);line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.stat .num .plus{color:var(--orange)}
+.stat .desc{margin-top:12px;color:var(--grey);font-size:16px;max-width:230px}
+.stat{padding-top:22px;border-top:2px solid var(--ink)}
+
+/* ---------- Audit / main service ---------- */
+.audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.audit-left .goal{margin-top:30px;padding-top:26px;border-top:1px solid var(--border)}
+.audit-left .goal h3{font-size:24px;font-weight:700}
+.audit-left .goal p{margin-top:10px;color:var(--grey)}
+.audit-left .btn{margin-top:28px}
+.audit-areas{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.area{background:#fff;padding:22px 20px}
+.area .ico{width:38px;height:38px;border-radius:9px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.area .ico svg{width:20px;height:20px;stroke:var(--orange)}
+.area h4{font-size:16px;font-weight:700;margin-bottom:6px}
+.area p{font-size:14px;color:var(--grey);line-height:1.5}
+
+/* ---------- Consulting options ---------- */
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.opt{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;display:flex;flex-direction:column;transition:box-shadow .2s ease,transform .2s ease}
+.opt:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.opt .onum{font-family:var(--font-head);font-weight:800;font-size:34px;color:var(--orange);letter-spacing:-.02em;margin-bottom:14px}
+.opt h3{font-size:22px;font-weight:700;line-height:1.25}
+.opt .otag{margin-top:10px;font-size:14px;color:var(--grey);font-weight:500;font-family:var(--font-head)}
+.opt .odesc{margin-top:16px;color:var(--grey);font-size:15.5px}
+.opt ul.act{margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.opt ul.act li{position:relative;padding-left:20px;font-size:14.5px;color:var(--grey)}
+.opt ul.act li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--orange)}
+.opt .btn-ghost{margin-top:auto;padding-top:22px}
+
+/* ---------- Trust ---------- */
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px}
+.trust .ico{width:46px;height:46px;border-radius:11px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:#fff}
+.trust .ico svg{width:23px;height:23px;stroke:var(--ink);stroke-width:1.6}
+.trust .ico .acc{stroke:var(--orange)}
+.trust h3{font-size:19px;font-weight:700;margin-bottom:8px}
+.trust p{color:var(--grey);font-size:15.5px}
+
+/* ---------- Personal branding ---------- */
+.pb-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.pb-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin:24px 0}
+.pb-list li{position:relative;padding-left:24px;font-size:15.5px;color:var(--grey)}
+.pb-list li svg{position:absolute;left:0;top:4px;width:16px;height:16px;stroke:var(--orange)}
+.pb-highlight{margin:22px 0;padding:22px 24px;background:#fff;border:1px solid var(--border);border-radius:var(--radius)}
+.pb-highlight .big{font-family:var(--font-head);font-weight:700;font-size:20px;color:var(--ink)}
+.pb-highlight .out{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.pb-highlight .out span{font-size:13px;font-weight:600;font-family:var(--font-head);color:var(--orange);background:var(--orange-soft);border-radius:100px;padding:5px 12px}
+.pb-note{font-size:14px;color:var(--grey);margin-top:6px}
+.pb-img{aspect-ratio:4/3}
+
+/* ---------- Case studies ---------- */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s ease,transform .2s ease}
+.case:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.case .cimg{aspect-ratio:16/10;border-bottom:1px solid var(--border);border-radius:0}
+.case .cbody{padding:24px;display:flex;flex-direction:column;flex:1}
+.case .ind{font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+.case h3{font-size:20px;font-weight:700;margin:12px 0 0;line-height:1.3}
+.case .row{margin-top:14px;font-size:14.5px;color:var(--grey)}
+.case .row b{color:var(--ink);font-family:var(--font-head);font-weight:600;font-size:13px}
+.case .result{margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-family:var(--font-head);font-weight:700;font-size:15px;color:var(--ink)}
+.case .result span{color:var(--orange)}
+.case .btn-ghost{margin-top:auto;padding-top:20px}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:45fr 55fr;gap:clamp(32px,5vw,64px);align-items:center}
+.about-img{aspect-ratio:4/5}
+.about-copy p{color:var(--grey);margin-top:18px}
+.about-copy .quoteblock{margin-top:26px;padding:24px 26px;background:var(--wash);border-radius:var(--radius);border:1px solid var(--border)}
+.about-copy .quoteblock .q{font-family:var(--font-head);font-weight:600;color:var(--grey);font-size:16px}
+.about-copy .quoteblock .q.strong{color:var(--ink);font-weight:700;font-size:19px;margin-top:8px}
+.about-copy .btn{margin-top:26px}
+
+/* ---------- Process ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step}
+.step{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px}
+.step .snum{font-family:var(--font-head);font-weight:800;font-size:15px;color:#fff;background:var(--ink);width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.step h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.step p{color:var(--grey);font-size:15px}
+.step .muted{margin-top:8px;font-size:13.5px;color:var(--grey);font-style:italic}
+.process-cta{margin-top:40px}
+
+/* ---------- Form ---------- */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.form-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:clamp(26px,3.5vw,40px);box-shadow:var(--shadow)}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:var(--font-head);font-weight:600;font-size:14px;margin-bottom:7px}
+.field label .req{color:var(--orange)}
+.field input,.field textarea{
+  width:100%;font-family:var(--font-body);font-size:16px;color:var(--ink);
+  padding:13px 15px;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff;
+  transition:border-color .15s ease,box-shadow .15s ease}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(249,115,22,.15)}
+.field textarea{resize:vertical;min-height:96px}
+.form-card .btn{width:100%;justify-content:center;margin-top:6px}
+.form-note{font-size:13px;color:var(--grey);margin-top:14px;text-align:center}
+.form-success{display:none;text-align:center;padding:30px 10px}
+.form-success.show{display:block}
+.form-success .check{width:56px;height:56px;border-radius:50%;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.form-success .check svg{width:28px;height:28px;stroke:var(--orange);stroke-width:2.2}
+.form-success h3{font-size:22px;font-weight:700;margin-bottom:10px}
+.form-success p{color:var(--grey)}
+.form-side .whatlist{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+.form-side .whatlist li{display:flex;gap:12px;align-items:flex-start;color:var(--grey);font-size:15.5px}
+.form-side .whatlist svg{flex:none;width:20px;height:20px;stroke:var(--orange);margin-top:2px}
+
+/* ---------- Insights ---------- */
+.insights{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ins{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s ease,transform .2s ease}
+.ins:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.ins .timg{aspect-ratio:16/9;border-bottom:1px solid var(--border)}
+.ins .ibody{padding:22px;display:flex;flex-direction:column;flex:1}
+.ins .cat{font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--orange)}
+.ins h3{font-size:18px;font-weight:700;margin:10px 0 0;line-height:1.32}
+.ins p{margin-top:10px;color:var(--grey);font-size:14.5px}
+.ins .btn-ghost{margin-top:auto;padding-top:18px;font-size:15px}
+
+/* ---------- Final CTA (dark) ---------- */
+.finalcta{text-align:center;max-width:720px;margin:0 auto}
+.finalcta .eyebrow{color:var(--orange)}
+.finalcta h2{color:#fff;font-size:clamp(30px,4.6vw,48px);font-weight:800;line-height:1.1}
+.finalcta p{color:rgba(255,255,255,.72);margin-top:20px;font-size:19px}
+.finalcta .btn{margin-top:34px}
+.finalcta .fine{margin-top:18px;color:rgba(255,255,255,.55);font-size:14px}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--ink);color:rgba(255,255,255,.7);padding-block:64px 40px;border-top:1px solid rgba(255,255,255,.08)}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+.footer .fbrand{font-family:var(--font-head);font-weight:800;font-size:22px;color:#fff;letter-spacing:-.02em}
+.footer .fbrand .dot{color:var(--orange)}
+.footer .ftag{margin-top:12px;font-size:15px;color:rgba(255,255,255,.6);max-width:320px}
+.footer .frel{margin-top:18px;font-size:14px;color:rgba(255,255,255,.5)}
+.footer h4{color:#fff;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.footer ul{display:flex;flex-direction:column;gap:11px}
+.footer ul a{font-size:15px;color:rgba(255,255,255,.7);transition:color .15s ease}
+.footer ul a:hover{color:var(--orange)}
+.footer .social{display:flex;gap:14px;margin-top:4px}
+.footer .social a{width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:9px;display:flex;align-items:center;justify-content:center;transition:border-color .15s ease,background .15s ease}
+.footer .social a:hover{border-color:var(--orange);background:rgba(249,115,22,.12)}
+.footer .social svg{width:19px;height:19px;stroke:#fff}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:28px;font-size:14px;color:rgba(255,255,255,.5)}
+.footer-bottom .legal{display:flex;gap:22px}
+.footer-bottom a:hover{color:var(--orange)}
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){
+  .hero-grid,.audit-grid,.pb-grid,.about-grid,.form-grid{grid-template-columns:1fr}
+  .hero-img,.pb-img,.about-img{order:2}
+  .hero .hero-copy{order:1}
+  .card-grid,.trust-grid{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr;gap:36px 28px}
+  .opts,.cases,.insights{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .audit-areas{grid-template-columns:1fr 1fr}
+  .pb-list{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .hero-img{aspect-ratio:16/12;max-height:420px}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .card-grid,.trust-grid,.steps,.audit-areas{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{justify-content:center}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .marquee-track{animation:none}
+  html{scroll-behavior:auto}
+}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<!-- ========================= HEADER ========================= -->
+<header class="header">
+  <div class="wrap">
+    <a href="#top" class="brand">Sangeetha S Abishek<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#audit">Marketing Consulting</a>
+      <a href="#branding">Personal Branding</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#insights">Insights</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary header-cta">Request a 15-Minute Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ========================= HERO ========================= -->
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Marketing Consulting for Established Businesses</p>
+      <h1>Marketing should not feel like a series of guesses.</h1>
+      <p class="support">I help established businesses understand what is working, what is not, and what they need to do next.</p>
+      <p class="add-line">Marketing audits, strategy and ongoing consulting for retail, e-commerce and consumer businesses.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary btn-lg">Request a 15-Minute Consultation</a>
+        <a href="#audit" class="btn btn-ghost">See How I Can Help <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="imgframe hero-img">
+      <span class="ph-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 20"/></svg>Photo</span>
+      <div class="ph-caption"><strong>Sangeetha at work</strong>Natural, editorial photo — reviewing marketing with a founder or in a modern workspace. Portrait 4:5.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= LOGO MARQUEE ========================= -->
+<section class="marquee-sec" aria-label="Client brands">
+  <p class="cap">Trusted by businesses across retail, e-commerce and consumer sectors</p>
+  <div class="marquee">
+    <div class="marquee-track" id="mtrack">
+      <span class="logo-item"><span class="mk">◆</span>Aurelia Silks</span>
+      <span class="logo-item"><span class="mk">●</span>Meraki Beauty</span>
+      <span class="logo-item"><span class="mk">▲</span>Kanaka Jewels</span>
+      <span class="logo-item"><span class="mk">■</span>Fresh &amp; Co.</span>
+      <span class="logo-item"><span class="mk">◆</span>Vastra Textiles</span>
+      <span class="logo-item"><span class="mk">●</span>Northline D2C</span>
+      <span class="logo-item"><span class="mk">▲</span>Bloom Foods</span>
+      <span class="logo-item"><span class="mk">■</span>Studio Kaya</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= BUSINESS PROBLEM ========================= -->
+<section class="section" id="problem">
+  <div class="wrap">
+    <div class="problem-intro">
+      <p class="eyebrow">The Real Question</p>
+      <h2 style="font-size:clamp(30px,4.4vw,46px);font-weight:700;line-height:1.12">You may already be doing a lot of marketing.</h2>
+      <div class="tags">
+        <span class="tag">A marketing team</span>
+        <span class="tag">Social media</span>
+        <span class="tag">Advertising</span>
+        <span class="tag">A website</span>
+        <span class="tag">E-commerce</span>
+        <span class="tag">Videos</span>
+        <span class="tag">Content</span>
+        <span class="tag">Influencer activity</span>
+      </div>
+      <p class="ask">But are we actually doing the right things?</p>
+    </div>
+    <div class="card-grid">
+      <div class="qcard"><div class="qmark">?</div><p>Why aren't our sales growing as expected?</p></div>
+      <div class="qcard"><div class="qmark">?</div><p>Are we spending our marketing budget in the right places?</p></div>
+      <div class="qcard"><div class="qmark">?</div><p>Is our social media actually helping the business?</p></div>
+      <div class="qcard"><div class="qmark">?</div><p>Is our website converting enough customers?</p></div>
+      <div class="qcard"><div class="qmark">?</div><p>Is our marketing team moving in the right direction?</p></div>
+      <div class="qcard"><div class="qmark">?</div><p>What should we focus on next?</p></div>
+    </div>
+    <div class="problem-close">
+      You don't need to know whether you need a social media consultant, an e-commerce consultant or a brand strategist before speaking to me. <strong>Understanding the real problem is part of the consulting process.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= NUMBERS ========================= -->
+<section class="section section--wash" id="numbers">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Experience</p>
+      <h2>The recommendations come from years of real work.</h2>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">12<span class="plus">+</span></div><p class="desc">Years in digital marketing and business strategy</p></div>
+      <div class="stat"><div class="num">200<span class="plus">+</span></div><p class="desc">Brands worked with across industries</p></div>
+      <div class="stat"><div class="num">960<span class="plus">+</span></div><p class="desc">Projects across marketing, content and digital growth</p></div>
+      <div class="stat"><div class="num">4,000<span class="plus">+</span></div><p class="desc">Entrepreneurs and students trained</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= MARKETING AUDIT & STRATEGY ========================= -->
+<section class="section" id="audit">
+  <div class="wrap">
+    <div class="audit-grid">
+      <div class="audit-left">
+        <p class="eyebrow">Marketing Audit &amp; Strategy</p>
+        <h2 style="font-size:clamp(28px,3.8vw,40px);font-weight:700;line-height:1.15">Before deciding what to do next, understand what is happening now.</h2>
+        <p style="margin-top:20px;color:var(--grey);max-width:520px">I look at marketing as a complete system rather than treating your website, content, advertising and social media as unrelated activities.</p>
+        <p style="margin-top:16px;color:var(--grey);max-width:520px">Depending on the business, the review may cover any of the areas on the right.</p>
+        <div class="goal">
+          <h3>The goal is simple.</h3>
+          <p>Understand where you are, identify the gaps and create a clear plan for what should happen next.</p>
+        </div>
+        <a href="#contact" class="btn btn-secondary">Explore Marketing Consulting</a>
+      </div>
+      <div class="audit-areas">
+        <div class="area">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h4>Brand &amp; Positioning</h4><p>Who are you trying to become in your customer's mind?</p>
+        </div>
+        <div class="area">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h4>Customers &amp; Competitors</h4><p>Who are you really selling to and what alternatives are they considering?</p>
+        </div>
+        <div class="area">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h4>Social Media &amp; Content</h4><p>Are you creating content that supports the business?</p>
+        </div>
+        <div class="area">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 8h20M6 21h12"/></svg></div>
+          <h4>Website &amp; E-commerce</h4><p>Is your digital experience helping customers buy?</p>
+        </div>
+        <div class="area">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h4>Advertising</h4><p>Are you spending money in the right places?</p>
+        </div>
+        <div class="area">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+          <h4>Analytics &amp; Performance</h4><p>What do the numbers actually tell us?</p>
+        </div>
+        <div class="area">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg></div>
+          <h4>Marketing Team &amp; Processes</h4><p>Does your team have the right people, skills and direction?</p>
+        </div>
+        <div class="area">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
+          <h4>Founder / Personal Brand</h4><p>Should the founder become more visible and trusted?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= WAYS WE CAN WORK TOGETHER ========================= -->
+<section class="section section--wash" id="options">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Consulting Options</p>
+      <h2>Different businesses need different levels of support.</h2>
+    </div>
+    <div class="opts">
+      <div class="opt">
+        <div class="onum">01</div>
+        <h3>Complete Marketing Audit &amp; Strategy</h3>
+        <p class="otag">4–6 week consulting engagement</p>
+        <p class="odesc">A detailed review of the business's marketing followed by a clear strategy and action plan. Best for businesses that need to step back, understand the bigger picture and identify what needs to change.</p>
+        <a href="#contact" class="btn btn-ghost">Learn More <span class="arrow">→</span></a>
+      </div>
+      <div class="opt">
+        <div class="onum">02</div>
+        <h3>Ongoing Marketing Consulting</h3>
+        <p class="otag">Strategic support while your team executes</p>
+        <p class="odesc">For businesses that want continued strategic guidance while their internal team, agency or freelancers implement the work.</p>
+        <ul class="act">
+          <li>Strategy reviews</li>
+          <li>Content, advertising &amp; campaign reviews</li>
+          <li>Performance reviews</li>
+          <li>Team discussions &amp; decision support</li>
+          <li>Correcting direction when needed</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost">Learn More <span class="arrow">→</span></a>
+      </div>
+      <div class="opt">
+        <div class="onum">03</div>
+        <h3>Monthly Marketing Review</h3>
+        <p class="otag">An experienced second opinion</p>
+        <p class="odesc">For businesses that already have execution in place but want Sangeetha to periodically review the marketing, performance and upcoming decisions.</p>
+        <a href="#contact" class="btn btn-ghost">Learn More <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= TRUST / WHY WORK WITH ME ========================= -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Why Work With Me</p>
+      <h2>Strategy that makes sense outside a presentation too.</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 2-4h16l2 4M4 7v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7M2 7h20M8 11h8"/></svg></div>
+        <h3>Business First</h3>
+        <p>Marketing recommendations should make sense for the business, not just for the platform.</p>
+      </div>
+      <div class="trust">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/><path class="acc" d="M15 15h0"/></svg></div>
+        <h3>Strategy + Execution Experience</h3>
+        <p>I understand both what a strategy should say and what happens when a real team has to implement it.</p>
+      </div>
+      <div class="trust">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Independent Perspective</h3>
+        <p>I can step outside the day-to-day activity and look at the complete marketing picture.</p>
+      </div>
+      <div class="trust">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z"/></svg></div>
+        <h3>Simple, Practical Direction</h3>
+        <p>No complicated marketing language for the sake of sounding impressive. You should understand what needs to be done and why.</p>
+      </div>
+      <div class="trust">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a6 6 0 0 0-12 0"/><circle cx="12" cy="7" r="4"/><path d="M3 21h18"/></svg></div>
+        <h3>Works With Your Existing Team</h3>
+        <p>You don't have to replace your agency, employees or freelancers. I can work with the people already executing your marketing.</p>
+      </div>
+      <div class="trust">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M3 21h18M9 21v-6h6v6M9 10h.01M15 10h.01"/></svg></div>
+        <h3>Experience Across Real Businesses</h3>
+        <p>Years of working with retailers, e-commerce brands, entrepreneurs and consumer businesses shape the recommendations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PERSONAL BRANDING ========================= -->
+<section class="section section--wash" id="branding">
+  <div class="wrap">
+    <div class="pb-grid">
+      <div>
+        <p class="eyebrow">Founder &amp; Personal Branding</p>
+        <h2 style="font-size:clamp(28px,3.8vw,40px);font-weight:700;line-height:1.15">Become known for the right things.</h2>
+        <p style="margin-top:20px;color:var(--grey)">Customers increasingly want to hear directly from founders and experts. But building a personal brand is not about copying every viral trend or becoming someone you are not.</p>
+        <p style="margin-top:14px;color:var(--grey)">I help founders, business owners, doctors, professionals and experts decide:</p>
+        <ul class="pb-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>What they should talk about</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>What they want to be known for</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Which platforms matter</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>How they should communicate</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>What content suits their personality</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>What the team should and shouldn't publish</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>How to build authority without damaging credibility</li>
+        </ul>
+        <div class="pb-highlight">
+          <p class="big">The objective is not simply to become popular. It is to become trusted.</p>
+          <div class="out">
+            <span>Customer trust</span><span>Sales</span><span>Industry recognition</span>
+          </div>
+          <p class="pb-note">Secondary outcomes: speaking engagements, collaborations and media visibility. For specialist clients such as doctors, the client approves all subject-specific facts before anything is published.</p>
+        </div>
+        <a href="#contact" class="btn btn-secondary">Explore Personal Branding</a>
+      </div>
+      <div class="imgframe pb-img">
+        <span class="ph-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 20"/></svg>Photo</span>
+        <div class="ph-caption"><strong>Sangeetha creating / speaking</strong>Recording educational content, teaching, or reviewing content with a founder. Ratio 4:3 — authentic, not a generic influencer shot.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= CASE STUDIES ========================= -->
+<section class="section" id="cases">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Real businesses. Real marketing problems.</h2>
+    </div>
+    <div class="cases">
+      <article class="case">
+        <div class="imgframe cimg">
+          <span class="ph-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 20"/></svg>Photo</span>
+        </div>
+        <div class="cbody">
+          <span class="ind">Retail · Textiles</span>
+          <h3>A regional saree retailer moving online</h3>
+          <p class="row"><b>Problem:</b> Strong in-store sales, but online activity wasn't turning into orders.</p>
+          <p class="row"><b>We did:</b> Rebuilt the digital experience around what real customers came looking for.</p>
+          <p class="result">Result: <span>Online enquiries and repeat buyers grew steadily quarter on quarter.</span></p>
+          <a href="#contact" class="btn btn-ghost">Read Case Study <span class="arrow">→</span></a>
+        </div>
+      </article>
+      <article class="case">
+        <div class="imgframe cimg">
+          <span class="ph-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 20"/></svg>Photo</span>
+        </div>
+        <div class="cbody">
+          <span class="ind">E-commerce · D2C</span>
+          <h3>A D2C brand spending more but growing less</h3>
+          <p class="row"><b>Problem:</b> Ads were generating sales, but the business as a whole wasn't growing.</p>
+          <p class="row"><b>We did:</b> Fixed the gaps between ads, website and repeat purchase before scaling spend.</p>
+          <p class="result">Result: <span>Healthier margins and growth that didn't disappear when ads paused.</span></p>
+          <a href="#contact" class="btn btn-ghost">Read Case Study <span class="arrow">→</span></a>
+        </div>
+      </article>
+      <article class="case">
+        <div class="imgframe cimg">
+          <span class="ph-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 20"/></svg>Photo</span>
+        </div>
+        <div class="cbody">
+          <span class="ind">Service · Lead Generation</span>
+          <h3>A service business drowning in weak leads</h3>
+          <p class="row"><b>Problem:</b> Plenty of enquiries, but very few turned into real customers.</p>
+          <p class="row"><b>We did:</b> Changed the message and targeting to attract the right kind of enquiry.</p>
+          <p class="result">Result: <span>Fewer, better leads and a clearer, calmer sales process.</span></p>
+          <a href="#contact" class="btn btn-ghost">Read Case Study <span class="arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= ABOUT ========================= -->
+<section class="section section--wash" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="imgframe about-img">
+        <span class="ph-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 20"/></svg>Photo</span>
+        <div class="ph-caption"><strong>Sangeetha — teaching or consulting</strong>A natural professional photo: teaching, consulting, speaking or working with a team. Portrait 4:5.</div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">About Sangeetha</p>
+        <h2 style="font-size:clamp(28px,3.8vw,40px);font-weight:700;line-height:1.15">Marketing Consultant. Entrepreneur. Educator.</h2>
+        <p>I co-founded SODME Digital Marketing in 2014 and have spent more than a decade working with businesses across digital marketing, content, advertising, e-commerce and brand growth.</p>
+        <p>My experience across entrepreneurship, consulting and teaching shapes the way I look at marketing.</p>
+        <div class="quoteblock">
+          <p class="q">I don't begin by asking: <em>"What should we post?"</em></p>
+          <p class="q strong">I begin with: "What is the business trying to achieve, and what needs to change for marketing to help us get there?"</p>
+        </div>
+        <a href="#contact" class="btn btn-secondary">More About Sangeetha</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PROCESS ========================= -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The First Step</p>
+      <h2>Start with a 15-minute conversation.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="snum">01</div>
+        <h3>Send Your Details</h3>
+        <p>Tell us briefly about your business and the problem you are facing.</p>
+      </div>
+      <div class="step">
+        <div class="snum">02</div>
+        <h3>15-Minute Consultation</h3>
+        <p>Sangeetha speaks with you to understand the business, the broad challenge and whether there is a mutual fit. It's also your chance to understand her approach.</p>
+        <p class="muted">This is not the full consulting session.</p>
+      </div>
+      <div class="step">
+        <div class="snum">03</div>
+        <h3>Recommended Approach</h3>
+        <p>If there is a fit, Sangeetha recommends the type of consulting support that makes sense for you.</p>
+      </div>
+      <div class="step">
+        <div class="snum">04</div>
+        <h3>Detailed Proposal</h3>
+        <p>You receive a proposal explaining scope, process, deliverables, commercial terms and next steps.</p>
+      </div>
+    </div>
+    <div class="process-cta">
+      <a href="#contact" class="btn btn-primary btn-lg">Request a 15-Minute Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= CONTACT / FORM ========================= -->
+<section class="section section--wash" id="contact">
+  <div class="wrap">
+    <div class="form-grid">
+      <div class="form-side">
+        <p class="eyebrow">Request a Consultation</p>
+        <h2 style="font-size:clamp(28px,3.8vw,40px);font-weight:700;line-height:1.15">Request a 15-Minute Consultation</h2>
+        <p style="margin-top:20px;color:var(--grey);max-width:460px">You don't need to diagnose the problem before speaking to me. Tell me where your business is today and what you are trying to solve.</p>
+        <ul class="whatlist">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A short, no-pressure conversation to understand your business.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A chance to see whether there is a mutual fit.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Our team will contact you directly to arrange the call.</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <form id="consultForm" novalidate>
+          <div class="field">
+            <label for="f-name">Your Name <span class="req">*</span></label>
+            <input type="text" id="f-name" name="name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="f-company">Company / Brand Name <span class="req">*</span></label>
+            <input type="text" id="f-company" name="company" required autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone / WhatsApp Number <span class="req">*</span></label>
+            <input type="tel" id="f-phone" name="phone" required autocomplete="tel" inputmode="tel">
+          </div>
+          <div class="field">
+            <label for="f-web">Website / Instagram</label>
+            <input type="text" id="f-web" name="website" autocomplete="url">
+          </div>
+          <div class="field">
+            <label for="f-about">Tell us briefly about your business</label>
+            <textarea id="f-about" name="about"></textarea>
+          </div>
+          <div class="field">
+            <label for="f-challenge">What is the main marketing challenge you are facing, and what would you like help with? <span class="req">*</span></label>
+            <textarea id="f-challenge" name="challenge" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Request a Consultation</button>
+          <p class="form-note">Phone / WhatsApp is essential — our team will contact you directly.</p>
+        </form>
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>Thank you.</h3>
+          <p>Our team will contact you to arrange the 15-minute consultation call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= INSIGHTS ========================= -->
+<section class="section" id="insights">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Insights</p>
+      <h2>Marketing explained for business owners.</h2>
+    </div>
+    <div class="insights">
+      <article class="ins">
+        <div class="imgframe timg"><span class="ph-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 20"/></svg>Thumbnail</span></div>
+        <div class="ibody">
+          <span class="cat">Marketing Strategy</span>
+          <h3>How do I know if my marketing agency is doing a good job?</h3>
+          <p>The simple questions to ask before you judge your agency by likes and reach.</p>
+          <a href="#" class="btn btn-ghost">Read <span class="arrow">→</span></a>
+        </div>
+      </article>
+      <article class="ins">
+        <div class="imgframe timg"><span class="ph-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 20"/></svg>Thumbnail</span></div>
+        <div class="ibody">
+          <span class="cat">Founder Branding</span>
+          <h3>Should a founder appear in their own Instagram videos?</h3>
+          <p>When showing up yourself helps the business — and when it doesn't.</p>
+          <a href="#" class="btn btn-ghost">Read <span class="arrow">→</span></a>
+        </div>
+      </article>
+      <article class="ins">
+        <div class="imgframe timg"><span class="ph-badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 20"/></svg>Thumbnail</span></div>
+        <div class="ibody">
+          <span class="cat">Digital Advertising</span>
+          <h3>Why are my Meta Ads generating sales but my business isn't growing?</h3>
+          <p>What to check before you spend more on advertising.</p>
+          <a href="#" class="btn btn-ghost">Read <span class="arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FINAL CTA ========================= -->
+<section class="section section--dark">
+  <div class="wrap">
+    <div class="finalcta">
+      <p class="eyebrow">The First Step</p>
+      <h2>Not sure what is wrong with your marketing?</h2>
+      <p>You don't need to diagnose the problem before speaking to me. Tell me where your business is today and what you are trying to solve.</p>
+      <a href="#contact" class="btn btn-primary btn-lg">Request a 15-Minute Consultation</a>
+      <p class="fine">Our team will contact you to arrange the call.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="fbrand">Sangeetha S Abishek<span class="dot">.</span></div>
+        <p class="ftag">Marketing Consultant | Entrepreneur | Educator</p>
+        <p class="frel">Co-founder, SODME Digital Marketing Pvt. Ltd.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.6a3 3 0 0 0-2.1-2.1C18 6 12 6 12 6s-6 0-7.9.5A3 3 0 0 0 2 8.6 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.4a3 3 0 0 0 2.1 2.1C6 18 12 18 12 18s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .3-3.4 31 31 0 0 0-.3-3.4Z"/><path d="m10 15 5-3-5-3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#audit">Marketing Consulting</a></li>
+          <li><a href="#branding">Personal Branding</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="#cases">Case Studies</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> Sangeetha S Abishek. All rights reserved.</span>
+      <span class="legal"><a href="#">Privacy Policy</a><a href="#">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  var toggle=document.getElementById('navToggle'),nav=document.getElementById('nav');
+  toggle.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
+  });
+
+  // Duplicate marquee for seamless loop
+  var track=document.getElementById('mtrack');
+  if(track){track.innerHTML+=track.innerHTML;}
+
+  // Form: client-side success message
+  var form=document.getElementById('consultForm'),success=document.getElementById('formSuccess');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var required=form.querySelectorAll('[required]');
+    var ok=true;
+    required.forEach(function(el){
+      if(!el.value.trim()){ok=false;el.style.borderColor='#d33';}
+      else{el.style.borderColor='';}
+    });
+    if(!ok){var first=form.querySelector('[required]:invalid,[required]');return;}
+    form.style.display='none';
+    success.classList.add('show');
+    success.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+
+  // Year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
