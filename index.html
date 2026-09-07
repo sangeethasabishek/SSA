@@ -159,8 +159,10 @@ ul{margin:0;padding:0;list-style:none}
 .qcard .qico{width:44px;height:44px;border-radius:12px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
 .qcard .qico svg{width:22px;height:22px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .qcard p{font-family:var(--font-head);font-weight:700;font-size:18px;line-height:1.35}
-.problem-close{margin-top:30px;padding:26px 28px;background:var(--card);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:0 var(--r) var(--r) 0;color:var(--grey);max-width:840px}
-.problem-close strong{color:var(--ink)}
+.problem-close{margin-top:44px;padding:30px 34px;background:#FCF3EA;border-left:3px solid var(--orange);border-radius:0 6px 6px 0;max-width:880px;display:flex;flex-direction:column;gap:14px}
+.problem-close .pc-lead{font-family:var(--font-head);font-weight:800;font-size:clamp(23px,2.8vw,32px);line-height:1.2;color:var(--ink);text-wrap:balance}
+.problem-close .pc-mid{font-family:var(--font-head);font-weight:600;font-size:clamp(17px,1.8vw,20px);color:var(--ink-soft)}
+.problem-close .pc-sub{font-size:16px;color:var(--grey)}
 
 /* ---------- Numbers ---------- */
 .stats-wrap{display:flex;align-items:flex-start;gap:32px;flex-wrap:wrap}
@@ -473,7 +475,11 @@ ul{margin:0;padding:0;list-style:none}
       <div class="qcard"><div class="qico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><p>Is our marketing team moving in the right direction?</p></div>
       <div class="qcard"><div class="qico"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><p>What should we focus on next?</p></div>
     </div>
-    <div class="problem-close">You don't need to know whether you need a social media consultant, an e-commerce consultant or a brand strategist before speaking to us. <strong>Understanding the real problem is part of the consulting process.</strong></div>
+    <div class="problem-close">
+      <p class="pc-lead">The problem is rarely just social media, ads or your website.</p>
+      <p class="pc-mid">It is usually how all of them are working together.</p>
+      <p class="pc-sub">We look at the complete picture before deciding what needs to change.</p>
+    </div>
   </div>
 </section>
 
