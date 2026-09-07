@@ -775,7 +775,6 @@ ul{margin:0;padding:0;list-style:none}
   faqBtns.forEach(function(btn){
     btn.addEventListener('click',function(){
       var isOpen=btn.getAttribute('aria-expanded')==='true';
-      faqBtns.forEach(function(o){ if(o!==btn && o.getAttribute('aria-expanded')==='true') closePanel(o); });
       if(isOpen) closePanel(btn); else openPanel(btn);
     });
   });
