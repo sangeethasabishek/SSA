@@ -675,7 +675,7 @@ ul{margin:0;padding:0;list-style:none}
           <div class="field"><label for="f-challenge">What is the main marketing challenge you are facing, and what would you like help with? <span class="req">*</span></label><textarea id="f-challenge" name="challenge" required></textarea></div>
           <input type="hidden" name="_subject" value="New consultation request — SSA website">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_cc" value="deepika@sodme.in">
+          <input type="hidden" name="_cc" value="info@sodme.in">
           <input type="hidden" name="_captcha" value="false">
           <div class="hpot" aria-hidden="true"><label>Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
           <button type="submit" class="btn btn-primary btn-lg">Request a Consultation <span class="arrow">→</span></button>
@@ -759,7 +759,7 @@ ul{margin:0;padding:0;list-style:none}
     if(!ok)return;
     var btn=form.querySelector('button[type="submit"]'),orig=btn.innerHTML;
     btn.disabled=true;btn.textContent='Sending…';
-    fetch('https://formsubmit.co/ajax/info@sodme.in',{
+    fetch('https://formsubmit.co/ajax/deepika@sodme.in',{
       method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)
     }).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(){
       form.style.display='none';
