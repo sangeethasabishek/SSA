@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://www.sangeethasabishek.com/digital-marketing-audit-strategy">
 <title>Digital Marketing Audit & Strategy — Sangeetha S Abishek</title>
-<meta name="description" content="A focused Digital Marketing Audit & Strategy for established businesses. Understand what's working, what's leaking, and exactly what to do next — 90-day and 6–12 month plan. Book a free 15-minute fit call.">
+<meta name="description" content="A Digital Marketing Audit & Strategy for established businesses. Find out why your ads, website, content or agency aren't driving sales — then get a clear marketing strategy, budget direction and 90-day plan. Free 15-minute fit call.">
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PV6XNSXZQ7"></script>
@@ -38,12 +38,12 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 .section--dark{background:var(--dark);color:#fff}
 .eyebrow{font-family:var(--font-head);font-weight:700;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin:0 0 16px;display:inline-flex;align-items:center;gap:12px}
 .eyebrow::before{content:"";width:26px;height:2px;background:var(--orange);border-radius:2px}
-.sechead{max-width:760px;margin-bottom:clamp(30px,4.5vw,50px)}
+.sechead{max-width:820px;margin-bottom:clamp(30px,4.5vw,50px)}
 .sechead.center{margin-inline:auto;text-align:center}
 .sechead.center .eyebrow{justify-content:center}
-.sechead h2{font-size:clamp(28px,3.8vw,44px);font-weight:800}
+.sechead h2{font-size:clamp(27px,3.7vw,42px);font-weight:800}
 .sechead .lead{margin-top:16px;color:var(--grey);font-size:clamp(16px,1.6vw,18.5px)}
-.sechead.center .lead{margin-inline:auto;max-width:640px}
+.sechead.center .lead{margin-inline:auto;max-width:660px}
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-head);font-weight:600;font-size:15.5px;padding:14px 26px;border-radius:var(--pill);border:1.5px solid transparent;cursor:pointer;white-space:nowrap;transition:background .18s,color .18s,border-color .18s,transform .18s,box-shadow .18s}
 .btn .arrow{transition:transform .18s}
@@ -54,9 +54,13 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 .btn-secondary{background:transparent;color:var(--ink);border-color:var(--ink)}
 .btn-secondary:hover{background:var(--ink);color:#fff}
 .btn-lg{padding:16px 32px;font-size:16.5px}
-.on-dark.btn-secondary{color:#fff;border-color:rgba(255,255,255,.5)}
-.on-dark.btn-secondary:hover{background:#fff;color:var(--ink)}
-/* header (minimal, conversion) */
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+@keyframes ctaPulse{0%,100%{box-shadow:0 8px 20px rgba(242,106,27,.28)}50%{box-shadow:0 10px 30px rgba(242,106,27,.5)}}
+.cta-pulse{animation:ctaPulse 2.8s ease-in-out infinite}
+.cta-pulse:hover{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.cta-pulse{animation:none}}
+/* header */
 .header{position:sticky;top:0;z-index:60;background:rgba(247,242,233,.9);backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid var(--border)}
 .header .wrap{display:flex;align-items:center;gap:16px;height:var(--header-h)}
 .brand{display:flex;align-items:center}
@@ -66,10 +70,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 /* image frame */
 .imgframe{position:relative;background:var(--cream-deep);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background-image:radial-gradient(circle at 30% 30%,rgba(242,106,27,.06),transparent 60%)}
 .imgframe img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.imgframe .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:22px;text-align:center;color:var(--grey)}
-.imgframe .ph svg{width:28px;height:28px;stroke:var(--orange);fill:none;stroke-width:1.6}
-.imgframe .ph span{font-size:13px;line-height:1.5;max-width:220px}
-/* HERO */
+/* HERO (unchanged) */
 .hero{padding-block:clamp(38px,6vw,76px)}
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(30px,5vw,58px);align-items:center}
 .hero h1{font-size:clamp(31px,4.7vw,54px);font-weight:800;line-height:1.05;margin:14px 0 0}
@@ -82,60 +83,77 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 .hero-tag{position:absolute;left:-12px;bottom:22px;background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);border-radius:var(--r-sm);padding:12px 16px;font-family:var(--font-head);font-weight:700;font-size:13.5px}
 .hero-tag b{color:var(--orange)}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:30px}.hero-visual{order:2}.hero-copy{order:1}.hero-img{aspect-ratio:16/11;max-height:420px}.hero-cta{flex-direction:column;align-items:stretch}.hero-cta .btn{width:100%}}
-/* FLOW audit -> strategy */
-.flow{max-width:720px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
-.flow-card{width:100%;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px 30px;box-shadow:var(--shadow);position:relative}
-.flow-card .fk{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.flow-card .fk .n{width:30px;height:30px;border-radius:8px;background:var(--orange-soft);color:var(--orange);display:flex;align-items:center;justify-content:center}
-.flow-card .fk .n svg{width:17px;height:17px;stroke:var(--orange);fill:none;stroke-width:2.2}
-.flow-card h3{font-size:clamp(20px,2.5vw,26px);font-weight:800}
-.flow-card p{margin-top:10px;color:var(--grey);font-size:15.5px}
-.flow-arrow{width:2px;height:34px;background:var(--border);position:relative}
-.flow-arrow::after{content:"";position:absolute;left:50%;bottom:-2px;width:12px;height:12px;border-right:2px solid var(--orange);border-bottom:2px solid var(--orange);transform:translateX(-50%) rotate(45deg)}
-/* FIT for you / not yet */
-.fit{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.fit-box{border-radius:var(--r);padding:28px 30px;border:1px solid var(--border)}
-.fit-yes{background:var(--pale);border-color:var(--orange-soft)}
-.fit-no{background:var(--cream-deep)}
-.fit-box .fh{font-family:var(--font-head);font-weight:800;font-size:16px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.fit-yes .fh{color:var(--ink)}.fit-no .fh{color:var(--grey)}
-.fit-box li{display:flex;gap:11px;align-items:flex-start;padding:8px 0;font-size:15.5px}
-.fit-yes li{color:var(--ink-soft)}.fit-no li{color:var(--grey)}
-.fit-box li svg{flex:none;width:19px;height:19px;margin-top:3px;fill:none;stroke-width:2.4}
-.fit-yes li svg{stroke:var(--orange)}.fit-no li svg{stroke:#B7AC99}
-@media(max-width:760px){.fit{grid-template-columns:1fr}}
-/* problem cards */
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.pcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px 26px;transition:box-shadow .2s,transform .2s}
+/* PROBLEM cards */
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px 24px;transition:box-shadow .2s,transform .2s}
 .pcard:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
-.pcard .qm{font-family:var(--font-head);font-weight:800;font-size:20px;color:var(--orange);width:38px;height:38px;border-radius:10px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.pcard p{font-family:var(--font-head);font-weight:600;font-size:16.5px;line-height:1.35}
-@media(max-width:820px){.pgrid{grid-template-columns:1fr 1fr}}
+.pcard .ico2{width:40px;height:40px;border-radius:11px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.pcard .ico2 svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pcard .st{font-family:var(--font-head);font-weight:700;font-size:16.5px;line-height:1.3;color:var(--ink)}
+.pcard .sub{margin-top:7px;color:var(--grey);font-size:13.5px;line-height:1.5}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.pgrid{grid-template-columns:1fr}}
-/* icon grid (what we audit) */
-.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 30px}
-.ig-item{display:flex;gap:14px;align-items:flex-start}
-.ig-item .ico{flex:none;width:44px;height:44px;border-radius:12px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center}
-.ig-item .ico svg{width:22px;height:22px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.ig-item h4{font-size:16px;font-weight:700}
-.ig-item p{margin-top:4px;color:var(--grey);font-size:14.5px;line-height:1.5}
-.close-line{margin-top:clamp(24px,3vw,38px);color:var(--grey);font-style:italic;max-width:760px}
-@media(max-width:820px){.igrid{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.igrid{grid-template-columns:1fr}}
-/* deliverables checklist */
-.deliv-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,56px);align-items:start}
-.checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
-.checklist li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px}
-.checklist li svg{flex:none;width:19px;height:19px;stroke:var(--orange);fill:none;stroke-width:2.6;margin-top:3px}
-.deliv-card{background:var(--ink);color:#fff;border-radius:var(--r);padding:30px 32px;position:sticky;top:96px}
-.deliv-card .k{font-family:var(--font-head);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
-.deliv-card .big{font-family:var(--font-head);font-weight:800;font-size:clamp(19px,2.2vw,23px);line-height:1.3}
-.deliv-card .plan{margin-top:18px;display:flex;flex-direction:column;gap:12px}
-.deliv-card .plan div{display:flex;gap:12px;align-items:flex-start}
-.deliv-card .plan .t{font-family:var(--font-head);font-weight:700;color:var(--orange);font-size:13px;letter-spacing:.05em;white-space:nowrap;padding-top:1px}
-.deliv-card .plan .d{color:rgba(255,255,255,.82);font-size:14.5px}
-@media(max-width:820px){.deliv-grid{grid-template-columns:1fr}.deliv-card{position:static}.checklist{grid-template-columns:1fr}}
-/* stats */
+/* WHAT WE AUDIT grid */
+.igrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ig-item{display:flex;gap:13px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);padding:16px 16px;transition:box-shadow .2s,transform .2s,border-color .2s}
+.ig-item:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px);border-color:var(--orange-soft)}
+.ig-item .ico{flex:none;width:40px;height:40px;border-radius:11px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center}
+.ig-item .ico svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ig-item h4{font-size:14.5px;font-weight:700;line-height:1.25}
+@media(max-width:900px){.igrid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.igrid{grid-template-columns:1fr}}
+.audit-outcome{margin-top:clamp(24px,3.4vw,38px);display:flex;flex-direction:column;align-items:center;gap:12px}
+.audit-outcome .down{width:2px;height:24px;background:var(--border);position:relative}
+.audit-outcome .down::after{content:"";position:absolute;left:50%;bottom:-2px;width:11px;height:11px;border-right:2px solid var(--orange);border-bottom:2px solid var(--orange);transform:translateX(-50%) rotate(45deg)}
+.audit-outcome .goal{background:var(--ink);color:#fff;border-radius:var(--pill);padding:13px 28px;font-family:var(--font-head);font-weight:800;font-size:clamp(14px,1.9vw,18px);display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;align-items:center;text-align:center}
+.audit-outcome .goal span{color:var(--orange)}
+/* AUDIT + STRATEGY */
+.as2{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch}
+.as-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px 30px;box-shadow:var(--shadow)}
+.as-card .k{font-family:var(--font-head);font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.as-card h3{font-size:clamp(18px,2.1vw,22px);font-weight:800;line-height:1.28;margin-bottom:16px}
+.as-card ul{display:flex;flex-direction:column;gap:9px}
+.as-card ul li{display:flex;gap:11px;align-items:flex-start;font-size:15px;color:var(--ink-soft)}
+.as-card ul li svg{flex:none;width:18px;height:18px;stroke:var(--orange);fill:none;stroke-width:2.4;margin-top:3px}
+.as-arrow{display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:30px;font-weight:800}
+@media(max-width:820px){.as2{grid-template-columns:1fr}.as-arrow{transform:rotate(90deg)}}
+/* DELIVERABLES 12 */
+.deliv12{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:20px 18px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .2s,transform .2s}
+.dcard:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.dcard .ico{width:40px;height:40px;border-radius:11px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center}
+.dcard .ico svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dcard .t{font-family:var(--font-head);font-weight:700;font-size:14.5px;line-height:1.3}
+@media(max-width:900px){.deliv12{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.deliv12{grid-template-columns:1fr}}
+.close-line{margin-top:clamp(24px,3vw,38px);color:var(--grey);max-width:760px}
+/* DIAGNOSTIC hub */
+.diag{display:flex;flex-direction:column;align-items:center}
+.diag-center{background:var(--orange);color:#fff;border-radius:var(--r);padding:20px 34px;text-align:center;box-shadow:0 12px 34px rgba(242,106,27,.3);font-family:var(--font-head);font-weight:800;font-size:clamp(15px,2.1vw,21px);max-width:540px}
+.diag-connect{width:2px;height:26px;background:var(--border)}
+.diag-causes{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;width:100%}
+.cause{background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);padding:16px 12px;text-align:center;font-family:var(--font-head);font-weight:600;font-size:13.5px;transition:box-shadow .2s,transform .2s,border-color .2s}
+.cause:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px);border-color:var(--orange-soft)}
+.cause .d{width:8px;height:8px;border-radius:50%;background:var(--orange);margin:0 auto 9px}
+.diag-note{margin-top:clamp(24px,3vw,36px);text-align:center;max-width:780px;margin-inline:auto;font-family:var(--font-head);font-weight:700;font-size:clamp(16px,1.9vw,20px)}
+.diag-note span{color:var(--orange)}
+@media(max-width:900px){.diag-causes{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.diag-causes{grid-template-columns:1fr 1fr}}
+/* CASE 3-step */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.case3{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:26px 26px;display:flex;flex-direction:column}
+.case3 .ind{font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+.case3 .step .lbl{font-family:var(--font-head);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-bottom:5px}
+.case3 .step .txt{font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+.case3 .step .txt ul{margin-top:6px;display:flex;flex-direction:column;gap:4px}
+.case3 .step .txt li{position:relative;padding-left:15px}
+.case3 .step .txt li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--orange)}
+.case3 .cdown{width:2px;height:16px;background:var(--border);margin:12px 0 12px 6px;position:relative}
+.case3 .cdown::after{content:"";position:absolute;left:50%;bottom:-1px;width:8px;height:8px;border-right:2px solid var(--orange);border-bottom:2px solid var(--orange);transform:translateX(-50%) rotate(45deg)}
+.case3 .key{margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-family:var(--font-head);font-weight:700;font-size:13.5px;color:var(--ink)}
+.case3 .key span{color:var(--orange)}
+@media(max-width:900px){.cases{grid-template-columns:1fr}}
+/* STATS */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .stat{padding:4px 24px;border-left:1px solid rgba(255,255,255,.14)}
 .stat:first-child{border-left:0;padding-left:0}
@@ -152,26 +170,29 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 .logo-item:hover{opacity:1}
 .logo-item img{max-height:40px;max-width:140px;width:auto;height:auto;display:block}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 28px))}}
-/* case cards */
-.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.case{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:26px 28px;display:flex;flex-direction:column}
-.case .ind{font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
-.case h3{font-size:18px;font-weight:800;margin:11px 0 0;line-height:1.3}
-.case .row{margin-top:12px;font-size:14.5px;color:var(--grey)}
-.case .row b{color:var(--ink);font-family:var(--font-head);font-weight:600;font-size:12.5px}
-.case .result{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-family:var(--font-head);font-weight:700;font-size:14.5px}
-.case .result span{color:var(--orange)}
-@media(max-width:820px){.cases{grid-template-columns:1fr}}
-/* process */
-.proc{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}
-.p{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px 20px;position:relative}
-.p .n{font-family:var(--font-head);font-weight:800;font-size:13px;color:var(--orange);margin-bottom:10px}
-.p h4{font-size:15.5px;font-weight:800}
-.p p{margin-top:7px;color:var(--grey);font-size:13.5px}
-.p .free{margin-top:8px;display:inline-block;font-size:11px;font-weight:700;font-family:var(--font-head);color:var(--good);background:rgba(46,125,50,.1);border-radius:100px;padding:3px 9px}
-@media(max-width:900px){.proc{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.proc{grid-template-columns:1fr}}
-/* credibility */
+/* PROCESS 6 flow */
+.flow6{max-width:820px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.f6{width:100%;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:20px 26px;display:flex;gap:18px;align-items:flex-start}
+.f6 .n{flex:none;width:38px;height:38px;border-radius:10px;background:var(--ink);color:#fff;font-family:var(--font-head);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.f6 h4{font-size:16px;font-weight:800}
+.f6 p{margin-top:5px;color:var(--grey);font-size:14px}
+.f6 .free{margin-top:6px;display:inline-block;font-size:11px;font-weight:700;font-family:var(--font-head);color:var(--good);background:rgba(46,125,50,.1);border-radius:100px;padding:3px 9px}
+.f6down{width:2px;height:18px;background:var(--border);position:relative}
+.f6down::after{content:"";position:absolute;left:50%;bottom:-1px;width:9px;height:9px;border-right:2px solid var(--orange);border-bottom:2px solid var(--orange);transform:translateX(-50%) rotate(45deg)}
+.proc-note{margin-top:26px;text-align:center;max-width:700px;margin-inline:auto;color:var(--grey);font-size:14.5px}
+/* NOT / THIS compare */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.fit-box{border-radius:var(--r);padding:28px 30px;border:1px solid var(--border)}
+.fit-yes{background:var(--pale);border-color:var(--orange-soft)}
+.fit-no{background:var(--cream-deep)}
+.fit-box .fh{font-family:var(--font-head);font-weight:800;font-size:16px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.fit-yes .fh{color:var(--ink)}.fit-no .fh{color:var(--grey)}
+.fit-box li{display:flex;gap:11px;align-items:flex-start;padding:8px 0;font-size:15.5px}
+.fit-yes li{color:var(--ink-soft)}.fit-no li{color:var(--grey)}
+.fit-box li svg{flex:none;width:19px;height:19px;margin-top:3px;fill:none;stroke-width:2.4}
+.fit-yes li svg{stroke:var(--orange)}.fit-no li svg{stroke:#B7AC99}
+@media(max-width:760px){.fit{grid-template-columns:1fr}}
+/* CREDIBILITY */
 .cred{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(28px,5vw,52px);align-items:center}
 .cred-img{aspect-ratio:1/1;border-radius:var(--r)}
 .cred h2{font-size:clamp(24px,3vw,34px);font-weight:800}
@@ -183,12 +204,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 .cred .btn-ghost .arrow{color:var(--orange);transition:transform .18s}
 .cred .btn-ghost:hover .arrow{transform:translateX(4px)}
 @media(max-width:720px){.cred{grid-template-columns:1fr}.cred-img{max-width:280px}}
-/* next-step callout */
-.nextstep{max-width:820px;margin:0 auto;text-align:center;padding:28px 32px;background:var(--card);border:1px solid var(--border);border-radius:var(--r)}
-.nextstep .k{font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
-.nextstep h3{font-size:clamp(19px,2.2vw,23px);font-weight:800}
-.nextstep p{margin-top:10px;color:var(--grey);font-size:15px}
-/* faq */
+/* FAQ */
 .faq{max-width:820px;margin:0 auto}
 .faq-item{border-top:1px solid var(--border)}.faq-item:last-child{border-bottom:1px solid var(--border)}
 .faq-q{width:100%;background:none;border:0;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:20px 2px;text-align:left;font-family:var(--font-head);font-weight:700;font-size:clamp(15.5px,1.7vw,17.5px);color:var(--ink);line-height:1.4;transition:color .15s}
@@ -199,7 +215,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 .faq-q[aria-expanded="true"] .faq-icon::after{transform:scaleY(0);opacity:0}
 .faq-a{overflow:hidden;height:0;opacity:0;transition:height .3s,opacity .3s}
 .faq-a-inner{padding:0 2px 22px;color:var(--grey);font-size:15px;line-height:1.68;max-width:700px}
-/* form / final */
+/* FORM / apply */
 .apply-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,56px);align-items:start}
 .apply-copy h2{color:#fff;font-size:clamp(27px,3.6vw,40px);font-weight:800;line-height:1.1}
 .apply-copy .lead{margin-top:18px;color:rgba(255,255,255,.72);font-size:17px;max-width:440px}
@@ -255,10 +271,11 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 .reveal.in{opacity:1;transform:none}
 .stagger>*{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 .stagger.in>*{opacity:1;transform:none}
-.stagger.in>*:nth-child(2){transition-delay:.06s}.stagger.in>*:nth-child(3){transition-delay:.12s}
-.stagger.in>*:nth-child(4){transition-delay:.18s}.stagger.in>*:nth-child(5){transition-delay:.24s}
-.stagger.in>*:nth-child(6){transition-delay:.3s}.stagger.in>*:nth-child(7){transition-delay:.36s}
-.stagger.in>*:nth-child(8){transition-delay:.42s}.stagger.in>*:nth-child(9){transition-delay:.48s}
+.stagger.in>*:nth-child(2){transition-delay:.05s}.stagger.in>*:nth-child(3){transition-delay:.1s}
+.stagger.in>*:nth-child(4){transition-delay:.15s}.stagger.in>*:nth-child(5){transition-delay:.2s}
+.stagger.in>*:nth-child(6){transition-delay:.25s}.stagger.in>*:nth-child(7){transition-delay:.3s}
+.stagger.in>*:nth-child(8){transition-delay:.35s}.stagger.in>*:nth-child(9){transition-delay:.4s}
+.stagger.in>*:nth-child(10){transition-delay:.45s}.stagger.in>*:nth-child(11){transition-delay:.5s}.stagger.in>*:nth-child(12){transition-delay:.55s}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.001ms!important}.reveal,.stagger>*{opacity:1;transform:none}.marquee-track{animation:none}html{scroll-behavior:auto}}
 :focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:4px}
 </style>
@@ -275,7 +292,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 
 <main id="top">
 
-<!-- HERO -->
+<!-- HERO (unchanged) -->
 <section class="section hero">
   <div class="wrap">
     <div class="hero-grid">
@@ -284,7 +301,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
         <h1>Digital Marketing Audit &amp; Strategy</h1>
         <p class="lead">For established businesses already running marketing — a team, an agency, ads, content — but unsure it's producing the right results. We find out what's working, what's leaking, and exactly what to do next.</p>
         <div class="hero-cta">
-          <a href="#apply" class="btn btn-primary btn-lg">Book a 15-Minute Fit Call <span class="arrow">→</span></a>
+          <a href="#apply" class="btn btn-primary btn-lg cta-pulse">Book a 15-Minute Fit Call <span class="arrow">→</span></a>
           <a href="#audit" class="btn btn-secondary btn-arrow-down">See What We Audit <span class="arrow">↓</span></a>
         </div>
         <div class="microtrust">
@@ -301,131 +318,22 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   </div>
 </section>
 
-<!-- AUDIT -> STRATEGY -->
-<section class="section section--card" id="outcomes">
-  <div class="wrap">
-    <div class="sechead center reveal">
-      <p class="eyebrow">Two Clear Outcomes</p>
-      <h2>From "we're not sure" to "we know exactly what to do."</h2>
-    </div>
-    <div class="flow reveal">
-      <div class="flow-card">
-        <div class="fk"><span class="n"><svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>Audit</div>
-        <h3>Understand what's really happening now.</h3>
-        <p>See what's working, what's not, and where money, time and opportunities are leaking across your marketing.</p>
-      </div>
-      <div class="flow-arrow" aria-hidden="true"></div>
-      <div class="flow-card">
-        <div class="fk"><span class="n"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span>Strategy</div>
-        <h3>Know exactly what to do next.</h3>
-        <p>What to fix, what to prioritise, and a clear plan for the next <strong>90 days</strong> and the next <strong>6–12 months</strong>.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- IS THIS FOR YOU -->
-<section class="section">
+<!-- 2. PROBLEM RECOGNITION -->
+<section class="section section--card">
   <div class="wrap">
     <div class="sechead reveal">
-      <p class="eyebrow">Is This For You?</p>
-      <h2>Built for established businesses already investing in marketing.</h2>
-    </div>
-    <div class="fit reveal">
-      <div class="fit-box fit-yes">
-        <div class="fh"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:2.4"><path d="M20 6 9 17l-5-5"/></svg>This is for you if…</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>You already have a team, agency, freelancers or ongoing marketing activity</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>You're spending on marketing but unsure it's producing results</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Sales aren't growing the way you expected</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Different people run different channels with no single direction</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>You're about to increase budget or make a big marketing decision</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>You're ready to act on clear recommendations</li>
-        </ul>
-      </div>
-      <div class="fit-box fit-no">
-        <div class="fh"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#B7AC99;fill:none;stroke-width:2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>Probably not yet if…</div>
-        <ul>
-          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>You're a brand-new business with no customers or sales yet</li>
-          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>You just want someone to run ads as cheaply as possible</li>
-          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>You're looking for guaranteed overnight results</li>
-          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>You don't have the budget or intent to act on the plan</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROBLEM -->
-<section class="section section--deep">
-  <div class="wrap">
-    <div class="sechead reveal">
-      <p class="eyebrow">Sound Familiar?</p>
-      <h2>You're doing a lot of marketing — but can't tell what's actually working.</h2>
+      <p class="eyebrow">The Marketing Problem</p>
+      <h2>Spending on Marketing, But Still Facing These Problems?</h2>
     </div>
     <div class="pgrid reveal stagger">
-      <div class="pcard"><div class="qm">?</div><p>We're spending more, but growth has stalled.</p></div>
-      <div class="pcard"><div class="qm">?</div><p>Lots of activity — but we can't tell what's driving sales.</p></div>
-      <div class="pcard"><div class="qm">?</div><p>The reports look busy, but the numbers don't reflect it.</p></div>
-      <div class="pcard"><div class="qm">?</div><p>Every channel is run by someone different, with no single direction.</p></div>
-      <div class="pcard"><div class="qm">?</div><p>We're about to raise the budget but aren't confident where it should go.</p></div>
-      <div class="pcard"><div class="qm">?</div><p>We know something's off — we just can't put our finger on it.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT WE AUDIT -->
-<section class="section section--card" id="audit">
-  <div class="wrap">
-    <div class="sechead reveal">
-      <p class="eyebrow">What We Audit</p>
-      <h2>We look at your marketing as one connected system.</h2>
-      <p class="lead">Not every business needs all of these — the audit is built around the problem we're solving. But we know where to look.</p>
-    </div>
-    <div class="igrid reveal stagger">
-      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></div><div><h4>Brand &amp; Positioning</h4><p>Are customers clear about what makes you different?</p></div></div>
-      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div><div><h4>Customers</h4><p>Are you speaking to the right people?</p></div></div>
-      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div><div><h4>Competitors</h4><p>How are customers comparing you with alternatives?</p></div></div>
-      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h4>Social Media &amp; Content</h4><p>Is your content helping the business, or just filling a calendar?</p></div></div>
-      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 8h20M6 21h12"/></svg></div><div><h4>Website &amp; E-commerce</h4><p>Is it helping people understand, trust and buy?</p></div></div>
-      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div><h4>Digital Advertising</h4><p>Are you spending in the right places, at the right time?</p></div></div>
-      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><div><h4>Analytics &amp; Performance</h4><p>What are the numbers actually telling you?</p></div></div>
-      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h4>Marketing Team &amp; Agency</h4><p>Do they have the right skills and direction?</p></div></div>
-      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div><div><h4>Founder / Personal Brand</h4><p>Should the founder become more visible and trusted?</p></div></div>
-    </div>
-    <p class="close-line reveal">One clear picture — instead of nine disconnected opinions.</p>
-  </div>
-</section>
-
-<!-- WHAT YOU RECEIVE -->
-<section class="section">
-  <div class="wrap">
-    <div class="sechead reveal">
-      <p class="eyebrow">What You Receive</p>
-      <h2>Clarity before more activity.</h2>
-    </div>
-    <div class="deliv-grid">
-      <div class="reveal">
-        <ul class="checklist stagger">
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A clear picture of what's working and what's not</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Where budget, time and opportunities are leaking</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What to continue, fix, stop and prioritise</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Channel-by-channel recommendations</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What your team or agency should focus on</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What to measure from here</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A focused 90-day action plan</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A 6–12 month strategic direction</li>
-        </ul>
-      </div>
-      <div class="deliv-card reveal">
-        <div class="k">The Plan You Walk Away With</div>
-        <p class="big">A clear plan that makes your next marketing decisions easier — not a document that sits in a folder.</p>
-        <div class="plan">
-          <div><span class="t">NOW</span><span class="d">Fix the biggest leaks and stop what's wasting money.</span></div>
-          <div><span class="t">90 DAYS</span><span class="d">Focused priorities your team can act on immediately.</span></div>
-          <div><span class="t">6–12 MO</span><span class="d">The strategic direction to grow with confidence.</span></div>
-        </div>
-      </div>
+      <div class="pcard"><div class="ico2"><svg viewBox="0 0 24 24"><path d="M23 18l-9.5-9.5-5 5L1 6"/><path d="M17 18h6v-6"/></svg></div><p class="st">ROAS has dropped.</p><p class="sub">We were doing well earlier. Now performance has fallen.</p></div>
+      <div class="pcard"><div class="ico2"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div><p class="st">Website sales aren't growing.</p><p class="sub">Traffic is coming, but orders are not.</p></div>
+      <div class="pcard"><div class="ico2"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="m10 8 6 4-6 4z"/></svg></div><p class="st">Reels get views, but not sales.</p><p class="sub">Content is performing. Business isn't.</p></div>
+      <div class="pcard"><div class="ico2"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div><p class="st">Influencers post, but sales aren't moving.</p><p class="sub">Reach is happening without enough commercial impact.</p></div>
+      <div class="pcard"><div class="ico2"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div><p class="st">Our agency is busy — but is it working?</p><p class="sub">A lot is being done, with no clarity on what's contributing.</p></div>
+      <div class="pcard"><div class="ico2"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><p class="st">Ads are spending. Results aren't improving.</p><p class="sub">More budget is not automatically creating more growth.</p></div>
+      <div class="pcard"><div class="ico2"><svg viewBox="0 0 24 24"><path d="m2 7 2-4h16l2 4M4 7v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7M2 7h20"/></svg></div><p class="st">Digital isn't bringing enough store walk-ins.</p><p class="sub">Online activity is not translating into offline business.</p></div>
+      <div class="pcard"><div class="ico2"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2"/></svg></div><p class="st">We don't know how much to spend on ads.</p><p class="sub">The business has no clear marketing-budget framework.</p></div>
     </div>
   </div>
 </section>
@@ -435,22 +343,20 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead reveal" style="margin-bottom:clamp(28px,4vw,44px)">
       <p class="eyebrow">Experience You Can Trust</p>
-      <h2 style="color:#fff">Recommendations that come from real business experience.</h2>
+      <h2 style="color:#fff">Marketing recommendations that come from real business experience.</h2>
     </div>
     <div class="stats reveal stagger">
-      <div class="stat"><div class="num">19+</div><div class="lab">Years</div><p class="desc">Marketing &amp; business experience</p></div>
-      <div class="stat"><div class="num">200+</div><div class="lab">Brands</div><p class="desc">Worked with across industries</p></div>
-      <div class="stat"><div class="num">960+</div><div class="lab">Projects</div><p class="desc">Across marketing &amp; growth</p></div>
-      <div class="stat"><div class="num">4,000+</div><div class="lab">Trained</div><p class="desc">Entrepreneurs &amp; students</p></div>
+      <div class="stat"><div class="num" data-count="19" data-suffix="+">19+</div><div class="lab">Years</div><p class="desc">Marketing &amp; business experience</p></div>
+      <div class="stat"><div class="num" data-count="200" data-suffix="+">200+</div><div class="lab">Brands</div><p class="desc">Worked with across industries</p></div>
+      <div class="stat"><div class="num" data-count="960" data-suffix="+">960+</div><div class="lab">Projects</div><p class="desc">Across marketing &amp; growth</p></div>
+      <div class="stat"><div class="num" data-count="4000" data-suffix="+">4,000+</div><div class="lab">Trained</div><p class="desc">Entrepreneurs &amp; students</p></div>
     </div>
   </div>
 </section>
 
 <!-- CLIENT LOGOS -->
 <section class="section section--card" style="padding-block:clamp(40px,5vw,64px)">
-  <div class="wrap">
-    <p class="mcap">Trusted by businesses across retail, e-commerce and consumer sectors</p>
-  </div>
+  <div class="wrap"><p class="mcap">Trusted by businesses across retail, e-commerce and consumer sectors</p></div>
   <div class="marquee">
     <div class="marquee-track" id="mtrack">
       <span class="logo-item"><img src="/images/clients/pothys.png" alt="Pothys" loading="lazy"></span>
@@ -470,62 +376,228 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   </div>
 </section>
 
-<!-- CASE CARDS -->
-<section class="section">
+<!-- 3. WHAT WE AUDIT -->
+<section class="section" id="audit">
   <div class="wrap">
     <div class="sechead reveal">
-      <p class="eyebrow">Real Businesses</p>
-      <h2>What clarity looks like in practice.</h2>
+      <p class="eyebrow">The Marketing Audit</p>
+      <h2>A Marketing Problem Can Start Anywhere. We Find Out Where.</h2>
+      <p class="lead">We audit the connected marketing system — instead of looking at one platform in isolation.</p>
     </div>
-    <div class="cases reveal stagger">
-      <div class="case">
-        <span class="ind">Retail · Textiles</span>
-        <h3>A regional saree retailer moving online</h3>
-        <p class="row"><b>Problem:</b> Strong in-store sales, but online activity wasn't turning into orders.</p>
-        <p class="result">Result: <span>Online enquiries and repeat buyers grew steadily quarter on quarter.</span></p>
+    <div class="igrid reveal stagger">
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></div><h4>Brand Positioning</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div><h4>Customer</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M20.6 13.4 12 22l-9-9V3h10z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div><h4>Offer</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4>Content</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></div><h4>Instagram / Social Media</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h4>Meta &amp; Google Ads</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 8h20M6 21h12"/></svg></div><h4>Website &amp; CRO</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></div><h4>Influencers</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2"/></svg></div><h4>Marketing Budget</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><h4>Analytics</h4></div>
+      <div class="ig-item"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div><h4>Agency / Marketing Team</h4></div>
+    </div>
+    <div class="audit-outcome reveal">
+      <div class="down" aria-hidden="true"></div>
+      <div class="goal">Sales <span>·</span> Leads <span>·</span> Store Walk-ins <span>·</span> Growth</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. AUDIT + STRATEGY -->
+<section class="section section--deep">
+  <div class="wrap">
+    <div class="sechead center reveal">
+      <p class="eyebrow">Audit → Strategy</p>
+      <h2>First, We Audit Your Marketing. Then We Build the Strategy.</h2>
+    </div>
+    <div class="as2 reveal">
+      <div class="as-card">
+        <div class="k">Marketing Audit</div>
+        <h3>Find out what is working and what is wasting money, time or opportunity.</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What's working?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What's not?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Where is money leaking?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What is not being measured properly?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What is wasting the team's time?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What is preventing growth?</li>
+        </ul>
       </div>
-      <div class="case">
-        <span class="ind">E-commerce · D2C</span>
-        <h3>A D2C brand spending more but growing less</h3>
-        <p class="row"><b>Problem:</b> Ads were generating sales, but the business as a whole wasn't growing.</p>
-        <p class="result">Result: <span>Healthier margins and growth that didn't vanish when ads paused.</span></p>
-      </div>
-      <div class="case">
-        <span class="ind">Service · Lead Generation</span>
-        <h3>A service business drowning in weak leads</h3>
-        <p class="row"><b>Problem:</b> Plenty of enquiries, but very few turned into real customers.</p>
-        <p class="result">Result: <span>Fewer, better leads and a clearer, calmer sales process.</span></p>
+      <div class="as-arrow" aria-hidden="true">→</div>
+      <div class="as-card">
+        <div class="k">Marketing Strategy</div>
+        <h3>Decide what the business should do next.</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What should we fix?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What should we stop?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What should we continue?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What should we prioritise?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Where should we spend?</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What should happen next?</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section section--deep" id="how">
+<!-- 5. WHAT YOU WALK AWAY WITH -->
+<section class="section section--card">
   <div class="wrap">
     <div class="sechead reveal">
-      <p class="eyebrow">How It Works</p>
-      <h2>A focused 4–6 week engagement — starting with a free call.</h2>
+      <p class="eyebrow">The Marketing Strategy</p>
+      <h2>Walk Away Knowing Exactly What Your Marketing Needs to Do Next.</h2>
     </div>
-    <div class="proc reveal stagger">
-      <div class="p"><div class="n">01</div><h4>15-Minute Fit Call</h4><p>We understand your business and see if it's a fit.</p><span class="free">Free</span></div>
-      <div class="p"><div class="n">02</div><h4>Deep-Dive &amp; Access</h4><p>Goals, history, and access to the relevant accounts.</p></div>
-      <div class="p"><div class="n">03</div><h4>The Audit</h4><p>We review the marketing as one connected system.</p></div>
-      <div class="p"><div class="n">04</div><h4>Build the Strategy</h4><p>Findings become priorities, direction and a roadmap.</p></div>
-      <div class="p"><div class="n">05</div><h4>Readout &amp; Action Plan</h4><p>A clear plan for what to do now, in 90 days and beyond.</p></div>
+    <div class="deliv12 reveal stagger">
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div><div class="t">Current Marketing Diagnosis</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div><div class="t">Opportunity Map</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/></svg></div><div class="t">Brand Positioning Recommendations</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div><div class="t">Customer Avatars</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 20v-6M6 20V10M18 20V4"/></svg></div><div class="t">Channel Strategy</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="t">Content Strategy</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="t">Advertising Recommendations</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 8h20M6 21h12"/></svg></div><div class="t">Website &amp; CRO Recommendations</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><div class="t">Analytics &amp; Measurement Framework</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2"/></svg></div><div class="t">Marketing Budget Direction</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></div><div class="t">90-Day Marketing Action Plan</div></div>
+      <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19V5m0 14 8-4 8 4M4 5l8 4 8-4"/></svg></div><div class="t">6–12 Month Strategic Roadmap</div></div>
+    </div>
+    <p class="close-line reveal">The final output is not just a list of problems. It's a prioritised direction for what the business should do next.</p>
+  </div>
+</section>
+
+<!-- 6. WHY THE PROBLEM MAY NOT BE WHERE THEY THINK -->
+<section class="section section--deep">
+  <div class="wrap">
+    <div class="sechead center reveal">
+      <p class="eyebrow">The Diagnosis</p>
+      <h2>You May Think You Need Better Ads. The Real Marketing Problem May Be Somewhere Else.</h2>
+    </div>
+    <div class="diag reveal">
+      <div class="diag-center">LOW SALES / LOW ROAS / SLOW GROWTH</div>
+      <div class="diag-connect" aria-hidden="true"></div>
+      <div class="diag-causes stagger">
+        <div class="cause"><span class="d"></span>Wrong audience</div>
+        <div class="cause"><span class="d"></span>Weak positioning</div>
+        <div class="cause"><span class="d"></span>Poor creative</div>
+        <div class="cause"><span class="d"></span>Wrong offer</div>
+        <div class="cause"><span class="d"></span>Website conversion problem</div>
+        <div class="cause"><span class="d"></span>Wrong ad budget</div>
+        <div class="cause"><span class="d"></span>Influencer mismatch</div>
+        <div class="cause"><span class="d"></span>Poor measurement</div>
+        <div class="cause"><span class="d"></span>Wrong product focus</div>
+        <div class="cause"><span class="d"></span>Agency / team execution gaps</div>
+      </div>
+    </div>
+    <p class="diag-note reveal">That's why we diagnose <span>before</span> recommending another campaign, Reel, discount or influencer.</p>
+  </div>
+</section>
+
+<!-- 7. CASE STUDIES -->
+<section class="section section--card">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <p class="eyebrow">Case Studies</p>
+      <h2>Businesses Came to Us With Marketing Problems. Here's What We Found.</h2>
+    </div>
+    <div class="cases reveal stagger">
+      <div class="case3">
+        <span class="ind">Silver Jewellery Brand</span>
+        <div class="step"><div class="lbl">The Marketing Problem</div><div class="txt">Content was going viral. Website sales were not growing.</div></div>
+        <div class="cdown" aria-hidden="true"></div>
+        <div class="step"><div class="lbl">What the Audit Found</div><div class="txt">Organic popularity was not automatically driving e-commerce conversion.</div></div>
+        <div class="cdown" aria-hidden="true"></div>
+        <div class="step"><div class="lbl">What the Strategy Changed</div><div class="txt"><ul><li>Separate organic and paid-content roles</li><li>Build conversion-focused advertising creatives</li><li>Use retargeting more effectively</li></ul></div></div>
+        <p class="key">Key learning: <span>Viral content and conversion content are not always the same thing.</span></p>
+      </div>
+      <div class="case3">
+        <span class="ind">Ad Account / Creative Problem</span>
+        <div class="step"><div class="lbl">The Marketing Problem</div><div class="txt">The team believed the account had constant creative fatigue.</div></div>
+        <div class="cdown" aria-hidden="true"></div>
+        <div class="step"><div class="lbl">What the Audit Found</div><div class="txt"><ul><li>Wrong creative direction</li><li>Insufficient creative testing</li><li>Inadequate campaign budget</li><li>Geographies with high return rates</li></ul></div></div>
+        <div class="cdown" aria-hidden="true"></div>
+        <div class="step"><div class="lbl">What the Strategy Changed</div><div class="txt"><ul><li>Improve creative selection and testing</li><li>Allocate enough budget to learn</li><li>Reduce poor-performing geographies</li></ul></div></div>
+        <p class="key">Key learning: <span>The problem wasn't simply creative fatigue — the diagnosis was incomplete.</span></p>
+      </div>
+      <div class="case3">
+        <span class="ind">Personal Brand Launch</span>
+        <div class="step"><div class="lbl">The Marketing Problem</div><div class="txt">Six months of trying to launch a leadership personal brand — with no clear plan.</div></div>
+        <div class="cdown" aria-hidden="true"></div>
+        <div class="step"><div class="lbl">What We Found They Needed</div><div class="txt"><ul><li>Personality &amp; tone of voice</li><li>Content format &amp; scripts</li><li>Shoot style &amp; production process</li><li>Platform approach</li></ul></div></div>
+        <div class="cdown" aria-hidden="true"></div>
+        <div class="step"><div class="lbl">What the Strategy Changed</div><div class="txt">A structured Instagram and YouTube personal-brand launch plan was created.</div></div>
+        <p class="key">Key learning: <span>Six months of uncertainty became a clear launch plan.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 8. PROCESS -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="sechead center reveal">
+      <p class="eyebrow">The Process</p>
+      <h2>From Marketing Problems to a Clear Strategy in 4–6 Weeks.</h2>
+    </div>
+    <div class="flow6 reveal">
+      <div class="f6"><div class="n">01</div><div><h4>15-Minute Fit Call</h4><p>Understand the business and determine the audit scope.</p><span class="free">Free</span></div></div>
+      <div class="f6down" aria-hidden="true"></div>
+      <div class="f6"><div class="n">02</div><div><h4>Discovery</h4><p>Understand the business, marketing, goals, team and current challenges.</p></div></div>
+      <div class="f6down" aria-hidden="true"></div>
+      <div class="f6"><div class="n">03</div><div><h4>Marketing Audit</h4><p>Review the relevant channels, data, campaigns, content, website and customer journey.</p></div></div>
+      <div class="f6down" aria-hidden="true"></div>
+      <div class="f6"><div class="n">04</div><div><h4>Diagnosis</h4><p>Identify what is working, what is leaking and what needs attention.</p></div></div>
+      <div class="f6down" aria-hidden="true"></div>
+      <div class="f6"><div class="n">05</div><div><h4>Marketing Strategy</h4><p>Define priorities, budgets, channels, content, advertising and conversion recommendations.</p></div></div>
+      <div class="f6down" aria-hidden="true"></div>
+      <div class="f6"><div class="n">06</div><div><h4>Action Plan</h4><p>Deliver the 90-day plan and 6–12 month strategic roadmap.</p></div></div>
+    </div>
+    <p class="proc-note reveal">The process is collaborative — we work directly with the client and relevant members of their marketing team or agency.</p>
+  </div>
+</section>
+
+<!-- 9. NOT AN AUTOMATED AUDIT -->
+<section class="section section--card">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <p class="eyebrow">Why It's Different</p>
+      <h2>This Is Not Another Automated Marketing Audit.</h2>
+    </div>
+    <div class="fit reveal">
+      <div class="fit-box fit-no">
+        <div class="fh"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:#B7AC99;fill:none;stroke-width:2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>Not this</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>An automated checklist</li>
+          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>A generic PDF</li>
+          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>"Post more Reels"</li>
+          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>"Increase your ad budget"</li>
+          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Platform-only recommendations</li>
+          <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>A list of problems without priorities</li>
+        </ul>
+      </div>
+      <div class="fit-box fit-yes">
+        <div class="fh"><svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:2.4"><path d="M20 6 9 17l-5-5"/></svg>This</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A business-specific marketing diagnosis</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A prioritised plan — not just a list of problems</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A connected marketing strategy, not one platform in isolation</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Clear marketing-budget direction and where to spend</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What to fix, stop, continue and prioritise</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A 90-day action plan and 6–12 month roadmap</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CREDIBILITY -->
-<section class="section section--card">
+<section class="section section--deep">
   <div class="wrap">
     <div class="cred">
       <div class="imgframe cred-img reveal"><img src="/images/photos/about-hero.jpg" alt="Sangeetha S Abishek"></div>
       <div class="reveal">
         <p class="eyebrow">Led By Sangeetha S Abishek</p>
         <h2>Marketing Consultant &amp; Fractional CMO.</h2>
-        <p>You work directly with an experienced marketer who has built and run a digital marketing business, not a junior handed a checklist. The recommendations come from strategy <em>and</em> execution across real businesses.</p>
+        <p>You work directly with an experienced marketer who has built and run a digital marketing business — not a junior handed a checklist. The recommendations come from marketing strategy <em>and</em> execution across real businesses.</p>
         <div class="mini-stats">
           <span><b>19+</b> years experience</span>
           <span><b>200+</b> brands</span>
@@ -537,31 +609,20 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   </div>
 </section>
 
-<!-- NEXT STEP (ongoing, small) -->
-<section class="section">
-  <div class="wrap">
-    <div class="nextstep reveal">
-      <div class="k">After The Audit</div>
-      <h3>Some businesses continue with ongoing support — only if it's the right fit.</h3>
-      <p>The Audit &amp; Strategy stands on its own. If you later want continued strategic guidance or Fractional CMO support while your team executes, that can be discussed separately. First, we get you clarity.</p>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
-<section class="section section--deep">
+<section class="section section--card">
   <div class="wrap">
     <div class="sechead center reveal">
       <p class="eyebrow">FAQ</p>
-      <h2>Quick answers before you book.</h2>
+      <h2>Common Questions About the Marketing Audit.</h2>
     </div>
     <div class="faq reveal">
-      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q1"><span>Is the 15-minute call really free?</span><span class="faq-icon"></span></button><div class="faq-a" id="q1"><div class="faq-a-inner">Yes — the fit call is complimentary and carries no obligation. It's a short conversation to understand your business and decide whether an Audit &amp; Strategy engagement makes sense and what scope fits.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q2"><span>How long does the Audit &amp; Strategy take?</span><span class="faq-icon"></span></button><div class="faq-a" id="q2"><div class="faq-a-inner">Usually around 4–6 weeks, depending on the business and the areas being reviewed.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q3"><span>Do we need to know what's wrong before contacting you?</span><span class="faq-icon"></span></button><div class="faq-a" id="q3"><div class="faq-a-inner">No. Most businesses come precisely because they're not sure where the real problem lies. Understanding that is the first part of the audit.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q4"><span>Can you work with our existing team or agency?</span><span class="faq-icon"></span></button><div class="faq-a" id="q4"><div class="faq-a-inner">Yes. You don't have to replace your current team, agency or freelancers. If capabilities are missing, identifying what the business needs can be part of the work.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q5"><span>Is this only about digital marketing?</span><span class="faq-icon"></span></button><div class="faq-a" id="q5"><div class="faq-a-inner">Digital is usually a big part of it, but we start with the business, customers and goals — not with a single platform.</div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q6"><span>Do you also execute the strategy?</span><span class="faq-icon"></span></button><div class="faq-a" id="q6"><div class="faq-a-inner">This engagement is about audit, strategy and direction. Your existing team can execute it. Ongoing support can be discussed separately if it's the right fit.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q1"><span>Is the 15-minute fit call really free?</span><span class="faq-icon"></span></button><div class="faq-a" id="q1"><div class="faq-a-inner">Yes — the fit call is complimentary and carries no obligation. It's a short conversation to understand your business and decide whether a Marketing Audit &amp; Strategy engagement makes sense and what scope fits.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q2"><span>How long does the Marketing Audit &amp; Strategy take?</span><span class="faq-icon"></span></button><div class="faq-a" id="q2"><div class="faq-a-inner">Usually around 4–6 weeks, depending on the business and the marketing channels being reviewed.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q3"><span>Do we need to know what's wrong with our marketing first?</span><span class="faq-icon"></span></button><div class="faq-a" id="q3"><div class="faq-a-inner">No. Most businesses come precisely because they can't tell whether the problem is the ads, the website, the content, the offer or the agency. Diagnosing that is the first part of the audit.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q4"><span>Can you work with our existing agency or marketing team?</span><span class="faq-icon"></span></button><div class="faq-a" id="q4"><div class="faq-a-inner">Yes. You don't have to replace your current team, agency or freelancers. If capabilities are missing, identifying what the business needs can be part of the work.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q5"><span>Is this only about ads and social media?</span><span class="faq-icon"></span></button><div class="faq-a" id="q5"><div class="faq-a-inner">No. Ads, content and social are usually part of it, but we look at the whole marketing system — positioning, offer, website, budget and measurement — because the real problem often sits somewhere unexpected.</div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false" aria-controls="q6"><span>Do you also execute the marketing strategy?</span><span class="faq-icon"></span></button><div class="faq-a" id="q6"><div class="faq-a-inner">This engagement is about the audit, diagnosis and strategy. Your existing team or agency can execute it. Ongoing support can be discussed separately if it's the right fit.</div></div></div>
     </div>
   </div>
 </section>
@@ -573,7 +634,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
       <div class="apply-copy reveal">
         <p class="eyebrow">The First Step</p>
         <h2>Find out what your marketing needs next.</h2>
-        <p class="lead">Tell us a little about your business. If it's a fit, we'll set up a free 15-minute call to understand the challenge and the right scope.</p>
+        <p class="lead">Tell us a little about your business and your marketing. If it's a fit, we'll set up a free 15-minute call to understand the problem and the right scope.</p>
         <ul class="points">
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A short, no-pressure conversation — not a sales pitch</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>You'll get a clear sense of how we can help</li>
@@ -597,7 +658,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
               <option>Not sure / just starting</option>
             </select>
           </div>
-          <div class="field"><label for="f-challenge">What's the main marketing challenge you'd like help with? <span class="req">*</span></label><textarea id="f-challenge" name="challenge" required></textarea></div>
+          <div class="field"><label for="f-challenge">What's the main marketing problem you'd like help with? <span class="req">*</span></label><textarea id="f-challenge" name="challenge" required></textarea></div>
           <input type="hidden" name="_subject" value="New Audit &amp; Strategy enquiry — SSA landing page">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_cc" value="deepika@sodme.in">
@@ -620,8 +681,8 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 
 <!-- STICKY MOBILE CTA -->
 <div class="mcta">
-  <div class="t">Digital Marketing Audit<small>Free 15-minute fit call</small></div>
-  <a href="#apply" class="btn btn-primary">Book Now</a>
+  <div class="t">Marketing Audit &amp; Strategy<small>Free 15-minute fit call</small></div>
+  <a href="#apply" class="btn btn-primary cta-pulse">Book Now</a>
 </div>
 
 <!-- FOOTER -->
@@ -655,15 +716,23 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 </footer>
 
 <script>
-  // reveal
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if('IntersectionObserver' in window && !reduce){
-    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
     document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
   } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
-  // marquee duplicate
   var track=document.getElementById('mtrack'); if(track){track.innerHTML+=track.innerHTML;}
-  // FAQ
+  // count-up numbers on scroll
+  (function(){
+    var nums=document.querySelectorAll('.num[data-count]');
+    if(!nums.length)return;
+    if(reduce){nums.forEach(function(el){el.textContent=(+el.dataset.count).toLocaleString()+(el.dataset.suffix||'');});return;}
+    function run(el){var target=+el.dataset.count,suf=el.dataset.suffix||'',dur=1400,start=null;
+      function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var val=Math.floor((1-Math.pow(1-p,3))*target);el.textContent=val.toLocaleString()+suf;if(p<1)requestAnimationFrame(step);else el.textContent=target.toLocaleString()+suf;}
+      requestAnimationFrame(step);}
+    var cio=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){run(en.target);cio.unobserve(en.target);}});},{threshold:.4});
+    nums.forEach(function(el){cio.observe(el);});
+  })();
   document.querySelectorAll('.faq-q').forEach(function(btn){
     btn.addEventListener('click',function(){
       var p=document.getElementById(btn.getAttribute('aria-controls'));
@@ -672,7 +741,6 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
       else{btn.setAttribute('aria-expanded','true');p.style.height=p.scrollHeight+'px';p.style.opacity='1';}
     });
   });
-  // form -> FormSubmit
   var form=document.getElementById('applyForm'),success=document.getElementById('formSuccess');
   form.addEventListener('submit',function(e){
     e.preventDefault();
