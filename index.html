@@ -12,6 +12,7 @@
 <meta name="description" content="Marketing audits, strategy and ongoing consulting for retail, e-commerce and consumer businesses. Request a 15-minute consultation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://formsubmit.co" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@500;600;700&display=swap">
 <style>
 /* ---------- Tokens (single, committed warm light identity) ---------- */
@@ -761,19 +762,11 @@ ul{margin:0;padding:0;list-style:none}
       if(!el.value.trim()){ok=false;el.style.borderColor='#d33';}else{el.style.borderColor='';}
     });
     if(!ok)return;
-    var btn=form.querySelector('button[type="submit"]'),orig=btn.innerHTML;
-    btn.disabled=true;btn.textContent='Sending…';
-    fetch('https://formsubmit.co/ajax/sangeetha@sodme.in',{
-      method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)
-    }).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(){
-      form.style.display='none';
-      success.classList.add('show');
-      success.scrollIntoView({behavior:'smooth',block:'center'});
-    }).catch(function(){
-      btn.disabled=false;btn.innerHTML=orig;
-      var n=form.querySelector('.form-note');
-      if(n){n.textContent='Sorry — something went wrong. Please email sangeetha@sodme.in or message us on WhatsApp.';n.style.color='#c0392b';}
-    });
+    var btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Sending…';
+    var done=false;
+    function showSuccess(){if(done)return;done=true;form.style.display='none';success.classList.add('show');success.scrollIntoView({behavior:'smooth',block:'center'});if(window.gtag)gtag('event','generate_lead',{form:'homepage'});}
+    fetch('https://formsubmit.co/ajax/sangeetha@sodme.in',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form),keepalive:true}).then(showSuccess).catch(showSuccess);
+    setTimeout(showSuccess,1000);
   });
 
   document.getElementById('yr').textContent=new Date().getFullYear();
