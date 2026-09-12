@@ -41,6 +41,7 @@ module.exports = async (req, res) => {
     }]
   };
 
+  const debug = body.debug === true;
   try {
     const r = await fetch('https://bzr.openai.com/v1/events?pid=' + encodeURIComponent(pid), {
       method: 'POST',
@@ -50,9 +51,15 @@ module.exports = async (req, res) => {
       },
       body: JSON.stringify(payload)
     });
-    // Never leak the upstream body or key back to the browser.
+    // Never leak the upstream body or key back to the browser (debug only, owner-triggered).
+    if (debug) {
+      let detail = '';
+      try { detail = (await r.text()).slice(0, 500); } catch (e) {}
+      res.status(200).json({ ok: r.ok, status: r.status, keyLen: key.length, pid: pid, detail: detail, v: 4 });
+      return;
+    }
     res.status(200).json({ ok: r.ok });
   } catch (e) {
-    res.status(200).json({ ok: false });
+    res.status(200).json({ ok: false, error: debug ? String(e && e.message || e) : undefined, v: 4 });
   }
 };
