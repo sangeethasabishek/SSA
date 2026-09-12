@@ -766,7 +766,7 @@ ul{margin:0;padding:0;list-style:none}
     if(!ok)return;
     var btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Sending…';
     var done=false;
-    function showSuccess(){if(done)return;done=true;form.style.display='none';success.classList.add('show');success.scrollIntoView({behavior:'smooth',block:'center'});if(window.gtag)gtag('event','generate_lead',{form:'homepage'});}
+    function showSuccess(){if(done)return;done=true;form.style.display='none';success.classList.add('show');success.scrollIntoView({behavior:'smooth',block:'center'});if(window.gtag)gtag('event','generate_lead',{form:'homepage'});try{fetch('/api/lead-conversion',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({event_id:(window.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2)),source_url:location.href,timestamp_ms:Date.now()})}).catch(function(){});}catch(e){}}
     fetch('https://formsubmit.co/ajax/sangeetha@sodme.in',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form),keepalive:true}).then(showSuccess).catch(showSuccess);
     setTimeout(showSuccess,1000);
   });
