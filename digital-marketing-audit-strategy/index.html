@@ -280,6 +280,16 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 .stagger.in>*:nth-child(8){transition-delay:.35s}.stagger.in>*:nth-child(9){transition-delay:.4s}
 .stagger.in>*:nth-child(10){transition-delay:.45s}.stagger.in>*:nth-child(11){transition-delay:.5s}.stagger.in>*:nth-child(12){transition-delay:.55s}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.001ms!important}.reveal,.stagger>*{opacity:1;transform:none}.marquee-track{animation:none}html{scroll-behavior:auto}}
+/* engagement devices (added) */
+.em{color:var(--orange)}
+.imgframe img{transition:transform .6s ease}
+.imgframe:hover img{transform:scale(1.045)}
+.img-badge{position:absolute;top:14px;left:14px;z-index:2;background:var(--orange);color:#fff;font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.03em;border-radius:100px;padding:7px 14px;box-shadow:0 6px 16px rgba(242,106,27,.35)}
+.img-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:28px 18px 15px;background:linear-gradient(transparent,rgba(25,21,16,.85))}
+.img-cap .n{font-family:var(--font-head);font-weight:800;color:#fff;font-size:16px;line-height:1.2}
+.img-cap .r{color:rgba(255,255,255,.82);font-size:12.5px;margin-top:2px}
+.as-card{position:relative;overflow:hidden}
+.as-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--orange)}
 :focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:4px}
 </style>
 </head>
@@ -326,7 +336,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead reveal">
       <p class="eyebrow">The Marketing Problem</p>
-      <h2>Spending on Marketing, But Still Facing These Problems?</h2>
+      <h2>Spending on Marketing, But Still Facing <span class="em">These Problems?</span></h2>
     </div>
     <div class="pgrid reveal stagger">
       <div class="pcard"><div class="ico2"><svg viewBox="0 0 24 24"><path d="M23 18l-9.5-9.5-5 5L1 6"/><path d="M17 18h6v-6"/></svg></div><p class="st">ROAS has dropped.</p><p class="sub">We were doing well earlier. Now performance has fallen.</p></div>
@@ -346,7 +356,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead reveal" style="margin-bottom:clamp(28px,4vw,44px)">
       <p class="eyebrow">Experience You Can Trust</p>
-      <h2 style="color:#fff">Marketing recommendations that come from real business experience.</h2>
+      <h2 style="color:#fff">Marketing recommendations that come from <span class="em">real business experience.</span></h2>
     </div>
     <div class="stats reveal stagger">
       <div class="stat"><div class="num" data-count="19" data-suffix="+">19+</div><div class="lab">Years</div><p class="desc">Marketing &amp; business experience</p></div>
@@ -384,7 +394,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead reveal">
       <p class="eyebrow">The Marketing Audit</p>
-      <h2>A Marketing Problem Can Start Anywhere. We Find Out Where.</h2>
+      <h2>A Marketing Problem Can Start Anywhere. <span class="em">We Find Out Where.</span></h2>
       <p class="lead">We audit the connected marketing system — instead of looking at one platform in isolation.</p>
     </div>
     <div class="igrid reveal stagger">
@@ -412,7 +422,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead center reveal">
       <p class="eyebrow">Audit → Strategy</p>
-      <h2>First, We Audit Your Marketing. Then We Build the Strategy.</h2>
+      <h2>First, We Audit Your Marketing. <span class="em">Then We Build the Strategy.</span></h2>
     </div>
     <div class="as2 reveal">
       <div class="as-card">
@@ -449,7 +459,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead reveal">
       <p class="eyebrow">The Marketing Strategy</p>
-      <h2>Walk Away Knowing Exactly What Your Marketing Needs to Do Next.</h2>
+      <h2>Walk Away Knowing <span class="em">Exactly What Your Marketing Needs to Do Next.</span></h2>
     </div>
     <div class="deliv12 reveal stagger">
       <div class="dcard"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div><div class="t">Current Marketing Diagnosis</div></div>
@@ -474,7 +484,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead center reveal">
       <p class="eyebrow">The Diagnosis</p>
-      <h2>You May Think You Need Better Ads. The Real Marketing Problem May Be Somewhere Else.</h2>
+      <h2>You May Think You Need Better Ads. <span class="em">The Real Marketing Problem May Be Somewhere Else.</span></h2>
     </div>
     <div class="diag reveal">
       <div class="diag-center">LOW SALES / LOW ROAS / SLOW GROWTH</div>
@@ -501,7 +511,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead reveal">
       <p class="eyebrow">Case Studies</p>
-      <h2>Businesses Came to Us With Marketing Problems. Here's What We Found.</h2>
+      <h2>Businesses Came to Us With Marketing Problems. <span class="em">Here's What We Found.</span></h2>
     </div>
     <div class="cases reveal stagger">
       <div class="case3">
@@ -539,7 +549,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead center reveal">
       <p class="eyebrow">The Process</p>
-      <h2>From Marketing Problems to a Clear Strategy in 4–6 Weeks.</h2>
+      <h2>From Marketing Problems to a Clear Strategy <span class="em">in 4–6 Weeks.</span></h2>
     </div>
     <div class="flow6 reveal">
       <div class="f6"><div class="n">01</div><div><h4>15-Minute Fit Call</h4><p>Understand the business and determine the audit scope.</p><span class="free">Free</span></div></div>
@@ -563,7 +573,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
   <div class="wrap">
     <div class="sechead reveal">
       <p class="eyebrow">Why It's Different</p>
-      <h2>This Is Not Another Automated Marketing Audit.</h2>
+      <h2>This Is Not Another <span class="em">Automated Marketing Audit.</span></h2>
     </div>
     <div class="fit reveal">
       <div class="fit-box fit-no">
@@ -596,7 +606,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
 <section class="section section--deep">
   <div class="wrap">
     <div class="cred">
-      <div class="imgframe cred-img reveal"><img src="/images/photos/about-hero.jpg" alt="Sangeetha S Abishek"></div>
+      <div class="imgframe cred-img reveal"><img src="/images/photos/about-hero.jpg" alt="Sangeetha S Abishek"><div class="img-badge">19+ years</div><div class="img-cap"><div class="n">Sangeetha S Abishek</div><div class="r">Marketing Consultant &amp; Fractional CMO</div></div></div>
       <div class="reveal">
         <p class="eyebrow">Led By Sangeetha S Abishek</p>
         <h2>Marketing Consultant &amp; Fractional CMO.</h2>
@@ -636,7 +646,7 @@ p{margin:0}ul{margin:0;padding:0;list-style:none}
     <div class="apply-grid">
       <div class="apply-copy reveal">
         <p class="eyebrow">The First Step</p>
-        <h2>Find out what your marketing needs next.</h2>
+        <h2>Find out what your marketing <span class="em">needs next.</span></h2>
         <p class="lead">Tell us a little about your business and your marketing. If it's a fit, we'll set up a free 15-minute call to understand the problem and the right scope.</p>
         <ul class="points">
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A short, no-pressure conversation — not a sales pitch</li>
