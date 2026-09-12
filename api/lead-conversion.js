@@ -27,9 +27,10 @@ module.exports = async (req, res) => {
   const eventId = String(body.event_id || (Date.now().toString(36) + Math.random().toString(36).slice(2)));
   const ts = Number(body.timestamp_ms) || Date.now();
   const sourceUrl = body.source_url || req.headers.referer || 'https://www.sangeethasabishek.com/';
+  const validateOnly = body.validate_only === true; // test the key without recording a conversion
 
   const payload = {
-    validate_only: false,
+    validate_only: validateOnly,
     events: [{
       id: eventId,
       type: 'lead_created',
