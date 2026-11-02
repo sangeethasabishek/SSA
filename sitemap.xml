@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://www.sangeethasabishek.com/blog</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -33,5 +33,11 @@
     <image:image><image:loc>https://www.sangeethasabishek.com/images/blog/customer-avatar/avatar-1-arjun-1600.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.sangeethasabishek.com/images/blog/customer-avatar/avatar-2-rahul-1600.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.sangeethasabishek.com/images/blog/customer-avatar/avatar-3-meera-1600.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.sangeethasabishek.com/blog/ai-marketing-guide</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.sangeethasabishek.com/images/blog/ai-marketing/ai-marketing-guide-og.jpg</image:loc></image:image>
   </url>
 </urlset>
