@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://www.sangeethasabishek.com/blog</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -57,5 +57,11 @@
     <image:image><image:loc>https://www.sangeethasabishek.com/images/blog/decode-to-create/diagram-b-decode-framework.png</image:loc></image:image>
     <image:image><image:loc>https://www.sangeethasabishek.com/images/blog/decode-to-create/diagram-c-skincare-reel-storyboard.png</image:loc></image:image>
     <image:image><image:loc>https://www.sangeethasabishek.com/images/blog/decode-to-create/diagram-d-insight-to-sales.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.sangeethasabishek.com/blog/dpdp-act-checklist-small-business</loc>
+    <lastmod>2026-11-05</lastmod>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.sangeethasabishek.com/images/blog/dpdp-act/dpdp-act-checklist-og.jpg</image:loc></image:image>
   </url>
 </urlset>
