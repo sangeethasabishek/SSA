@@ -183,11 +183,13 @@
       });
     }
     function section(sec) { rise(sec); parallax(sec); }
+    // hold point for a pinned section: centred on screen, or just below the floating header if it is too tall to centre
+    function pinStart(sec) { return function () { return sec.offsetHeight > window.innerHeight - 90 ? 'top 80px' : 'center center'; }; }
     // scale a pinned block down if it is taller than the screen, so nothing is cut off
     function fitter(wrap) {
       function fit() {
         gsap.set(wrap, { scale: 1 });
-        var sc = Math.min(1, (window.innerHeight - 40) / wrap.offsetHeight);
+        var sc = Math.min(1, (window.innerHeight - 150) / wrap.offsetHeight);
         gsap.set(wrap, { scale: sc, transformOrigin: '50% 50%' });
       }
       fit();
@@ -286,7 +288,7 @@
       }
       if (canPin) {
         sec.classList.add('is-pinned');
-        build(gsap.timeline({ scrollTrigger: { trigger: sec, start: 'top top', end: '+=110%', pin: true, scrub: 0.5 } }))
+        build(gsap.timeline({ scrollTrigger: { trigger: sec, start: pinStart(sec), end: '+=110%', pin: true, scrub: 0.5 } }))
           .to({}, { duration: 0.3 });
         return function () { sec.classList.remove('is-pinned'); nums.forEach(function (n) { n.textContent = fmt(+n.dataset.to) + n.dataset.suffix; }); };
       }
@@ -385,7 +387,7 @@
       var settled = false;
       gsap.timeline({
         defaults: { ease: 'none' },
-        scrollTrigger: { trigger: sec, start: 'top top', end: '+=140%', pin: true, scrub: 0.5,
+        scrollTrigger: { trigger: sec, start: pinStart(sec), end: '+=140%', pin: true, scrub: 0.5,
           onUpdate: function (s) { settled = s.progress > 0.8; } }
       })
         .fromTo(tiles,
@@ -416,7 +418,7 @@
       sec.classList.add('is-pinned');
       function dist() { return Math.max(0, track.scrollWidth - hs.clientWidth); }
       var slide = gsap.to(track, { x: function () { return -dist(); }, ease: 'none',
-        scrollTrigger: { trigger: sec, start: 'top top', end: function () { return '+=' + dist(); }, pin: true, scrub: 0.6, invalidateOnRefresh: true } });
+        scrollTrigger: { trigger: sec, start: pinStart(sec), end: function () { return '+=' + dist(); }, pin: true, scrub: 0.6, invalidateOnRefresh: true } });
       // panels already on screen draw as the section arrives; the rest as they slide in
       ScrollTrigger.create({ trigger: sec, start: 'top 55%', once: true, onEnter: function () {
         panels.forEach(function (p) { if (p.getBoundingClientRect().left < window.innerWidth * 0.9) once(p); });
@@ -492,7 +494,7 @@
       gsap.set(dot, { x: 0, autoAlpha: 0 });
       var settled = false;
       var tl = gsap.timeline({
-        scrollTrigger: { trigger: sec, start: 'top top', end: '+=200%', pin: true, scrub: 0.6, invalidateOnRefresh: true,
+        scrollTrigger: { trigger: sec, start: pinStart(sec), end: '+=200%', pin: true, scrub: 0.6, invalidateOnRefresh: true,
           onUpdate: function (s) { settled = s.progress > 0.92; } }
       });
       tl.fromTo(cards, { x: handX, y: function (i, c) { return FAN[i].dy * c.offsetHeight + 60; }, rotation: function (i) { return FAN[i].r * 0.4; } },
@@ -528,7 +530,7 @@
     keep((function () {
       var sec = $('.section--dark');
       var track = $('.band__track', sec);
-      var loop = gsap.to(track, { xPercent: -50, duration: 32, ease: 'none', repeat: -1 });
+      var loop = gsap.to(track, { xPercent: -50, duration: 12, ease: 'none', repeat: -1 });
       var skewTo = gsap.quickTo($$('.band span', sec), 'skewX', { duration: 0.5, ease: 'power3' });
       var settle;
       ScrollTrigger.create({
