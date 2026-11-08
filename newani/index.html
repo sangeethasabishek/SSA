@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sangeetha S Abishek | Marketing Consultant &amp; Fractional CMO</title>
+<meta name="description" content="Marketing audits, strategy and ongoing consulting for established retail, e-commerce and consumer businesses.">
+<!-- Animated preview of the homepage: kept out of search results until it replaces index.html -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  document.documentElement.classList.add('js');
+  // safety net: never leave the loader up if a script fails
+  setTimeout(function(){var l=document.getElementById('loader');if(l)l.remove();},7000);
+</script>
+<style>
+/* ===== Base: copied from the live homepage (index.html) ===== */
+/* ---------- Tokens (single, committed warm light identity) ---------- */
+:root{
+  --cream:#F7F2E9;      /* main warm ground */
+  --cream-deep:#F1E9DA; /* alternating band */
+  --card:#FFFFFF;       /* cards */
+  --ink:#1A1712;        /* headings / primary text */
+  --ink-soft:#2A251E;
+  --orange:#F26A1B;     /* accent */
+  --orange-dark:#DB5A10;
+  --orange-soft:#FBE6D5;
+  --grey:#6B6154;       /* warm secondary text */
+  --border:#E7DDCC;     /* warm hairlines */
+  --dark:#191510;       /* dark CTA / footer */
+
+  --font-head:'Manrope','Segoe UI',system-ui,-apple-system,sans-serif;
+  --font-body:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  --font-script:'Caveat','Segoe Script',cursive;
+
+  --maxw:1200px;
+  --gutter:clamp(20px,5vw,64px);
+  --r:14px;      /* card radius */
+  --r-sm:10px;
+  --pill:100px;
+  --shadow:0 1px 2px rgba(25,21,16,.03),0 10px 30px rgba(25,21,16,.06);
+  --shadow-hover:0 2px 6px rgba(25,21,16,.05),0 18px 44px rgba(25,21,16,.10);
+  --header-h:76px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overscroll-behavior-y:none}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:var(--font-body);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--font-head);margin:0;color:var(--ink);text-wrap:balance;letter-spacing:-.015em;line-height:1.1}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+
+/* ---------- Helpers ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(60px,8vw,104px)}
+.section--deep{background:var(--cream-deep)}
+.section--card{background:var(--card)}
+.section--dark{background:var(--dark)}
+.eyebrow{
+  font-family:var(--font-head);font-weight:700;font-size:clamp(28px,3.6vw,42px);
+  letter-spacing:.02em;text-transform:uppercase;color:var(--orange);line-height:1.12;
+  margin:0 0 14px;display:inline-flex;align-items:center;gap:14px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--orange);border-radius:2px}
+.script{font-family:var(--font-script);color:var(--orange);line-height:1;font-weight:600}
+.section-head{max-width:720px;margin-bottom:clamp(34px,5vw,54px)}
+.section-head h2{font-size:clamp(30px,4.2vw,46px);font-weight:800}
+.section-head .lead{margin-top:18px;color:var(--grey);font-size:clamp(16px,1.5vw,18px);max-width:600px}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-head);font-weight:600;font-size:15.5px;
+  padding:14px 26px;border-radius:var(--pill);
+  border:1.5px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease;
+}
+.btn .arrow{transition:transform .18s ease}
+.btn:hover .arrow{transform:translateX(4px)}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(242,106,27,.28)}
+.btn-primary:hover{background:var(--orange-dark);box-shadow:0 10px 26px rgba(242,106,27,.34)}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-secondary:hover{background:var(--ink);color:#fff}
+.btn-ghost{padding:0;border-radius:0;color:var(--ink);font-family:var(--font-head);font-weight:700;gap:8px;border-bottom:2px solid var(--orange);padding-bottom:3px}
+.btn-ghost .arrow{color:var(--orange)}
+.btn-lg{padding:16px 32px;font-size:16.5px}
+.on-dark.btn-ghost{color:#fff}
+
+/* ---------- Header ---------- */
+.header{position:sticky;top:0;z-index:60;background:rgba(247,242,233,.9);backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid var(--border)}
+.header .wrap{display:flex;align-items:center;gap:24px;height:var(--header-h)}
+.brand{display:flex;align-items:center;line-height:1;white-space:nowrap}
+.brand-logo{height:40px;width:auto;display:block}
+.nav{display:flex;align-items:center;gap:18px;margin-left:auto}
+.nav a{font-size:14px;color:var(--ink);font-weight:500;white-space:nowrap;transition:color .15s ease}
+.nav a:hover{color:var(--orange)}
+.header .btn{padding:11px 24px;font-size:14.5px;line-height:1}
+.nav-toggle{display:none;margin-left:auto;background:none;border:1px solid var(--border);border-radius:10px;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer}
+.nav-toggle svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round}
+@media(max-width:1240px){
+  .nav{display:none}
+  .header .btn.header-cta{display:none}
+  .nav-toggle{display:flex}
+  .nav.open{display:flex;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;left:0;right:0;top:var(--header-h);background:var(--cream);border-bottom:1px solid var(--border);padding:12px var(--gutter) 22px;margin:0}
+  .nav.open a{padding:11px 0;width:100%;border-bottom:1px solid var(--border)}
+  .nav.open .btn{display:inline-flex;margin-top:14px}
+}
+
+/* ---------- Placeholder image frame ---------- */
+.imgframe{position:relative;background:var(--cream-deep);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;background-image:radial-gradient(circle at 30% 30%,rgba(242,106,27,.06),transparent 60%)}
+.imgframe .ph-badge{position:absolute;top:14px;left:14px;font-family:var(--font-head);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);background:var(--card);border:1px solid var(--border);border-radius:var(--pill);padding:6px 12px;display:inline-flex;align-items:center;gap:7px}
+.imgframe .ph-badge svg{width:13px;height:13px;stroke:var(--orange);fill:none;stroke-width:2}
+.imgframe .ph-caption{padding:20px;color:var(--grey);font-size:14px;line-height:1.5;background:linear-gradient(transparent,rgba(241,233,218,.94) 34%)}
+.imgframe .ph-caption strong{color:var(--ink);font-family:var(--font-head);display:block;margin-bottom:3px}
+.imgframe img.frame-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;z-index:1}
+.imgframe .ph-script{z-index:3;text-shadow:0 2px 14px rgba(0,0,0,.45),0 1px 3px rgba(0,0,0,.35)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding-block:clamp(44px,6vw,80px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,5vw,60px);align-items:center}
+.hero h1{font-size:clamp(40px,6vw,64px);font-weight:800;margin:16px 0 0}
+.hero .support{margin-top:22px;font-size:clamp(17px,1.6vw,19px);color:var(--grey);max-width:500px}
+.hero .add-line{margin-top:14px;font-size:15.5px;color:var(--grey);max-width:500px}
+.hero-cta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:32px}
+.hero-proof{margin-top:20px;font-family:var(--font-head);font-weight:600;font-size:13.5px;letter-spacing:.01em;color:var(--grey)}
+.hero-proof .sep{color:var(--orange);margin:0 8px;font-weight:700}
+.hero-visual{position:relative}
+.hero-img{aspect-ratio:4/5}
+.hero-script{position:absolute;top:34px;left:-6px;font-size:34px;transform:rotate(-8deg);z-index:3;color:var(--orange);pointer-events:none}
+.hero-card{position:absolute;right:14px;bottom:18px;background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);box-shadow:var(--shadow);padding:16px 18px;max-width:230px;z-index:4}
+.hero-card .hcn{font-family:var(--font-head);font-weight:800;font-size:15px}
+.hero-card .hcr{font-size:12px;color:var(--grey);margin-top:2px}
+
+.hero-rail{position:absolute;top:50%;right:calc(var(--gutter) * -0.15);transform:translateY(-50%);display:flex;flex-direction:column;gap:16px;align-items:flex-end}
+.hero-rail span{font-family:var(--font-head);font-weight:700;font-size:11px;letter-spacing:.2em;color:var(--grey);display:flex;align-items:center;gap:8px}
+.hero-rail span::after{content:"";width:14px;height:2px;background:var(--orange);border-radius:2px}
+@media(max-width:1240px){.hero-rail{display:none}}
+
+/* ---------- Logo marquee ---------- */
+.marquee-sec{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-block:40px;background:var(--card)}
+.marquee-sec .cap{text-align:center;font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-bottom:28px;padding-inline:var(--gutter)}
+.marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;width:max-content;gap:60px;align-items:center;animation:scroll 44s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.logo-item{display:flex;align-items:center;justify-content:center;opacity:.66;transition:opacity .25s ease}
+.logo-item:hover{opacity:1}
+.logo-item img{max-height:42px;max-width:150px;width:auto;height:auto;display:block}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 30px))}}
+
+/* ---------- Problem ---------- */
+.problem-intro{max-width:740px;margin-bottom:32px}
+.problem-intro h2{font-size:clamp(30px,4.2vw,46px);font-weight:800}
+.problem-intro .tags{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0}
+.problem-intro .tag{font-size:14px;color:var(--grey);border:1px solid var(--border);border-radius:var(--pill);padding:6px 15px;background:var(--card)}
+.problem-intro .ask{font-family:var(--font-script);font-size:clamp(30px,4.5vw,42px);color:var(--orange);margin-top:6px}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.qcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:26px;transition:box-shadow .2s ease,transform .2s ease}
+.qcard:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.qcard .qico{width:44px;height:44px;border-radius:12px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.qcard .qico svg{width:22px;height:22px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.qcard p{font-family:var(--font-head);font-weight:700;font-size:18px;line-height:1.35}
+.problem-close{margin-top:44px;padding:30px 34px;background:#FCF3EA;border-left:3px solid var(--orange);border-radius:0 6px 6px 0;max-width:880px;display:flex;flex-direction:column;gap:14px}
+.problem-close .pc-lead{font-family:var(--font-head);font-weight:800;font-size:clamp(23px,2.8vw,32px);line-height:1.2;color:var(--ink);text-wrap:balance}
+.problem-close .pc-mid{font-family:var(--font-head);font-weight:600;font-size:clamp(17px,1.8vw,20px);color:var(--ink-soft)}
+.problem-close .pc-sub{font-size:16px;color:var(--grey)}
+
+/* ---------- Numbers ---------- */
+.stats-wrap{display:flex;align-items:flex-start;gap:32px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;flex:1;min-width:280px}
+.stat .num{font-family:var(--font-head);font-weight:800;font-size:clamp(40px,5.4vw,58px);line-height:1;letter-spacing:-.03em;color:var(--orange);font-variant-numeric:tabular-nums}
+.stat .lab{margin-top:8px;font-family:var(--font-head);font-weight:700;font-size:16px;color:var(--ink)}
+.stat .desc{margin-top:3px;color:var(--grey);font-size:14.5px;max-width:210px}
+
+/* ---------- Audit ---------- */
+.audit-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,60px);align-items:center;margin-bottom:clamp(34px,5vw,52px)}
+.audit-copy h2{font-size:clamp(28px,3.6vw,42px);font-weight:800}
+.audit-copy p{margin-top:18px;color:var(--grey);max-width:520px}
+.audit-copy .goal{margin-top:24px;padding-top:22px;border-top:1px solid var(--border)}
+.audit-copy .goal h3{font-size:22px;font-weight:800}
+.audit-copy .goal p{margin-top:8px}
+.audit-copy .btn{margin-top:26px}
+.audit-img{aspect-ratio:5/4}
+.audit-img .ph-script{position:absolute;left:22px;bottom:66px;font-family:var(--font-script);font-size:26px;color:var(--orange);transform:rotate(-5deg);z-index:2}
+.audit-areas{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.area{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px 20px;transition:box-shadow .2s ease,transform .2s ease}
+.area:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.area .ico{width:40px;height:40px;border-radius:11px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.area .ico svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.area h4{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.area p{font-size:13.5px;color:var(--grey);line-height:1.5}
+
+/* ---------- Options ---------- */
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.opt{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:32px 28px;display:flex;flex-direction:column;transition:box-shadow .2s ease,transform .2s ease}
+.opt:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.opt .otop{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.opt .oico{width:48px;height:48px;border-radius:13px;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;flex:none}
+.opt .oico svg{width:24px;height:24px;stroke:var(--orange);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.opt .onum{font-family:var(--font-head);font-weight:800;font-size:26px;color:var(--border)}
+.opt h3{font-size:21px;font-weight:800;line-height:1.25}
+.opt .otag{margin-top:10px;font-size:13.5px;color:var(--grey);font-weight:600;font-family:var(--font-head)}
+.opt .odesc{margin-top:14px;color:var(--grey);font-size:15px}
+.opt ul.act{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.opt ul.act li{position:relative;padding-left:20px;font-size:14px;color:var(--grey)}
+.opt ul.act li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--orange)}
+.opt .btn-ghost{margin-top:auto;align-self:flex-start;padding-top:0}
+.opt .btn-ghost{margin-top:24px}
+
+/* ---------- Trust ---------- */
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 32px}
+.trust .ico{width:52px;height:52px;border-radius:14px;border:1px solid var(--border);background:var(--card);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.trust .ico svg{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.trust h3{font-size:18.5px;font-weight:800;margin-bottom:8px}
+.trust p{color:var(--grey);font-size:15px}
+
+/* ---------- Personal branding ---------- */
+.pb-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,60px);align-items:center}
+.pb-img{aspect-ratio:4/3}
+.pb-img .ph-script{position:absolute;left:20px;bottom:70px;font-family:var(--font-script);font-size:24px;color:var(--orange);transform:rotate(-6deg);z-index:2}
+.pb-copy h2{font-size:clamp(28px,3.6vw,42px);font-weight:800}
+.pb-copy p{margin-top:16px;color:var(--grey)}
+.pb-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin:22px 0}
+.pb-list li{position:relative;padding-left:26px;font-size:15px;color:var(--grey)}
+.pb-list li svg{position:absolute;left:0;top:3px;width:17px;height:17px;stroke:var(--orange);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pb-highlight{margin:22px 0;padding:22px 24px;background:var(--card);border:1px solid var(--border);border-radius:var(--r)}
+.pb-highlight .big{font-family:var(--font-head);font-weight:800;font-size:19px}
+.pb-highlight .out{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.pb-highlight .out span{font-size:13px;font-weight:700;font-family:var(--font-head);color:var(--orange);background:var(--orange-soft);border-radius:var(--pill);padding:5px 13px}
+.pb-highlight .pb-note{font-size:13.5px;color:var(--grey);margin-top:12px}
+
+/* ---------- Cases ---------- */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s ease,transform .2s ease}
+.case:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.case .cimg{aspect-ratio:16/10;border-bottom:1px solid var(--border);border-radius:0}
+.case .cbody{padding:24px;display:flex;flex-direction:column;flex:1}
+.case .ind{font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+.case h3{font-size:19px;font-weight:800;margin:11px 0 0;line-height:1.3}
+.case .row{margin-top:13px;font-size:14px;color:var(--grey)}
+.case .row b{color:var(--ink);font-family:var(--font-head);font-weight:600;font-size:12.5px}
+.case .result{margin-top:15px;padding-top:15px;border-top:1px solid var(--border);font-family:var(--font-head);font-weight:700;font-size:14.5px}
+.case .result span{color:var(--orange)}
+.case .btn-ghost{margin-top:auto;padding-top:0;margin-top:20px;align-self:flex-start}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:0.85fr 1fr;gap:clamp(32px,5vw,60px);align-items:center}
+.about-img{aspect-ratio:4/5}
+.about-img .ph-script{position:absolute;left:20px;top:24px;font-family:var(--font-script);font-size:24px;color:var(--orange);transform:rotate(-7deg);z-index:2}
+.about-copy h2{font-size:clamp(28px,3.6vw,42px);font-weight:800}
+.about-copy p{color:var(--grey);margin-top:16px}
+.about-copy .quoteblock{margin-top:24px;padding:24px 26px;background:var(--card);border:1px solid var(--border);border-radius:var(--r)}
+.about-copy .quoteblock .q{font-family:var(--font-head);font-weight:600;color:var(--grey);font-size:16px}
+.about-copy .quoteblock .q.strong{color:var(--ink);font-weight:800;font-size:19px;margin-top:8px;line-height:1.3}
+.about-copy .btn{margin-top:24px}
+
+/* ---------- Process ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px 24px;position:relative}
+.step .snum{font-family:var(--font-head);font-weight:800;font-size:14px;color:#fff;background:var(--orange);width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.step h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.step p{color:var(--grey);font-size:14.5px}
+.step .muted{margin-top:8px;font-size:13px;color:var(--grey);font-style:italic}
+.process-cta{margin-top:38px}
+
+/* ---------- Form ---------- */
+.form-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(32px,5vw,60px);align-items:start}
+.form-side h2{font-size:clamp(28px,3.6vw,42px);font-weight:800}
+.form-side .fp{margin-top:18px;color:var(--grey);max-width:440px}
+.form-side .whatlist{margin-top:24px;display:flex;flex-direction:column;gap:14px}
+.form-side .whatlist li{display:flex;gap:12px;align-items:flex-start;color:var(--grey);font-size:15px}
+.form-side .whatlist svg{flex:none;width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.form-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:clamp(26px,3.4vw,38px);box-shadow:var(--shadow)}
+.field{margin-bottom:17px}
+.field label{display:block;font-family:var(--font-head);font-weight:600;font-size:14px;margin-bottom:7px}
+.field label .req{color:var(--orange)}
+.field input,.field textarea{width:100%;font-family:var(--font-body);font-size:16px;color:var(--ink);padding:13px 15px;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--cream);transition:border-color .15s ease,box-shadow .15s ease,background .15s ease}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--orange);background:var(--card);box-shadow:0 0 0 3px rgba(242,106,27,.16)}
+.field textarea{resize:vertical;min-height:92px}
+.hpot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-card .btn{width:100%;justify-content:center;margin-top:4px}
+.form-note{font-size:12.5px;color:var(--grey);margin-top:13px;text-align:center}
+.form-success{display:none;text-align:center;padding:26px 8px}
+.form-success.show{display:block}
+.form-success .check{width:58px;height:58px;border-radius:50%;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.form-success .check svg{width:28px;height:28px;stroke:var(--orange);fill:none;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.form-success h3{font-size:22px;font-weight:800;margin-bottom:10px}
+.form-success p{color:var(--grey)}
+
+/* ---------- Insights ---------- */
+.insights{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ins{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s ease,transform .2s ease}
+.ins:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.ins .timg{aspect-ratio:16/9;border-bottom:1px solid var(--border)}
+.ins .ibody{padding:22px;display:flex;flex-direction:column;flex:1}
+.ins .cat{font-family:var(--font-head);font-weight:700;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--orange)}
+.ins h3{font-size:18px;font-weight:800;margin:10px 0 0;line-height:1.32}
+.ins p{margin-top:10px;color:var(--grey);font-size:14px}
+.ins .btn-ghost{margin-top:auto;padding-top:0;margin-top:18px;align-self:flex-start}
+
+/* ---------- Final CTA ---------- */
+.final-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,60px);align-items:center}
+.finalcta .eyebrow{color:var(--orange)}
+.finalcta h2{color:#fff;font-size:clamp(30px,4.4vw,48px);font-weight:800;line-height:1.08}
+.finalcta p{color:rgba(255,255,255,.72);margin-top:20px;font-size:18px;max-width:480px}
+.finalcta .btn{margin-top:30px}
+.finalcta .fine{margin-top:16px;color:rgba(255,255,255,.5);font-size:14px}
+.final-img{aspect-ratio:4/3;background:#221d16;border-color:rgba(255,255,255,.12)}
+.final-img .ph-badge{background:#2c261d;border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.6)}
+.final-img .ph-caption{color:rgba(255,255,255,.6);background:linear-gradient(transparent,rgba(34,29,22,.9) 34%)}
+.final-img .ph-caption strong{color:#fff}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--dark);color:rgba(255,255,255,.68);padding-block:62px 38px;border-top:1px solid rgba(255,255,255,.08)}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.12)}
+.footer .fbrand .bn{font-family:var(--font-head);font-weight:800;font-size:22px;color:#fff;letter-spacing:-.02em}
+.footer .fbrand .bn .dot{color:var(--orange)}
+.footer .ftag{margin-top:12px;font-size:15px;color:rgba(255,255,255,.58);max-width:320px}
+.footer .frel{margin-top:16px;font-size:14px;color:rgba(255,255,255,.46)}
+.footer h4{color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.footer ul{display:flex;flex-direction:column;gap:11px}
+.footer ul a{font-size:15px;color:rgba(255,255,255,.68);transition:color .15s ease}
+.footer ul a:hover{color:var(--orange)}
+.footer .social{display:flex;gap:12px;margin-top:20px}
+.footer .social a{width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:11px;display:flex;align-items:center;justify-content:center;transition:border-color .15s ease,background .15s ease}
+.footer .social a:hover{border-color:var(--orange);background:rgba(242,106,27,.14)}
+.footer .social svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:26px;font-size:14px;color:rgba(255,255,255,.48)}
+.footer-bottom .legal{display:flex;gap:22px}
+.footer-bottom a:hover{color:var(--orange)}
+
+/* ---------- Responsive ---------- */
+@media(max-width:960px){
+  .hero-grid,.audit-top,.pb-grid,.about-grid,.form-grid,.final-grid{grid-template-columns:1fr}
+  .hero-visual,.pb-img,.about-img,.final-img{order:2}
+  .hero-copy,.pb-copy,.about-copy,.finalcta{order:1}
+  .card-grid,.trust-grid{grid-template-columns:1fr 1fr}
+  .audit-areas{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr;gap:34px 26px}
+  .opts,.cases,.insights{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .pb-list{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .hero-img{aspect-ratio:16/12;max-height:440px}
+  .about-img{max-height:520px}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .card-grid,.trust-grid,.steps,.audit-areas{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{justify-content:center}
+  .hero-card{position:static;max-width:none;margin-top:14px}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}.marquee-track{animation:none}html{scroll-behavior:auto}}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:4px}
+/* Swapped scale: section headings take the small (former eyebrow) size */
+.section-head h2,.problem-intro h2,.audit-copy h2,.pb-copy h2,.about-copy h2,.form-side h2,.finalcta h2{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+/* Keep the hero masthead eyebrow at its original small size */
+.hero .eyebrow{font-size:12.5px;letter-spacing:.18em;line-height:1.4;margin:0 0 18px}
+
+/* =====================================================================
+   ANIMATED HOMEPAGE LAYER (newani)
+   Everything below sits on top of the live homepage styles.
+   html.motion is added by the script when GSAP is loaded and the
+   visitor has not asked for reduced motion.
+===================================================================== */
+:root{--amber:#F6B26B;--cw:calc(min(var(--maxw),100vw) - 2 * var(--gutter))}
+html{scroll-behavior:auto;overflow-x:clip}
+body{overflow-x:clip}
+@media(max-width:560px){.btn-lg{font-size:14.5px;padding:15px 20px}.hero .eyebrow::before{display:none}}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+
+/* split text */
+.w{display:inline-block;white-space:nowrap}
+.l{display:inline-block;-webkit-text-stroke:calc(var(--wt,0) * 1.3px) currentColor}
+
+/* section colours: real backgrounds without motion, body colour fades between them with motion */
+[data-bg="dark"]{background:var(--dark);color:var(--cream)}
+[data-bg="deep"]{background:var(--cream-deep)}
+[data-bg="card"]{background:var(--card)}
+[data-bg="cream"]{background:var(--cream)}
+html.motion [data-bg]{background:transparent}
+html.motion .marquee-sec{background:transparent}
+
+/* ---------- Loader ---------- */
+#loader{display:none}
+.js #loader{display:flex;position:fixed;inset:0;z-index:200;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;gap:26px}
+#loader img{width:min(300px,64vw);height:auto}
+.ld__bar{width:min(220px,50vw);height:2px;background:var(--border);border-radius:2px;overflow:hidden}
+.ld__bar i{display:block;height:100%;background:var(--orange);transform:scaleX(0);transform-origin:0 50%}
+
+/* ---------- Header: full width, then a floating pill ---------- */
+.header{position:fixed;left:0;right:0;top:0;background:transparent;border-bottom:0;backdrop-filter:none;transition:top .5s cubic-bezier(.2,.8,.2,1)}
+.header .wrap{transition:max-width .6s cubic-bezier(.2,.8,.2,1),height .4s ease,background .4s ease,border-radius .6s ease,box-shadow .4s ease,border-color .4s ease;border:1px solid transparent;border-radius:0}
+.header.is-pill{top:12px}
+.header.is-pill .wrap{max-width:min(1080px,calc(100% - 24px));height:64px;background:rgba(247,242,233,.86);-webkit-backdrop-filter:saturate(150%) blur(14px);backdrop-filter:saturate(150%) blur(14px);border-radius:var(--pill);border-color:var(--border);box-shadow:0 10px 30px rgba(25,21,16,.10);padding-inline:clamp(18px,2.4vw,28px)}
+.header .brand-logo{height:36px}
+@media(max-width:1240px){.nav.open{top:calc(100% + 8px);border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--shadow-hover)}}
+
+/* ---------- Cursor: dot + four corner brackets ---------- */
+.cur{display:none}
+.has-cur .cur{display:block}
+.has-cur,.has-cur a,.has-cur button{cursor:none}
+.has-cur input,.has-cur textarea{cursor:text}
+.cur__dot{position:fixed;left:0;top:0;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;background:var(--orange);pointer-events:none;z-index:300}
+.cur__box{position:fixed;left:0;top:0;width:32px;height:32px;pointer-events:none;z-index:300}
+.cur__box b{position:absolute;width:9px;height:9px;border:2px solid var(--orange)}
+.cur__box .tl{left:0;top:0;border-right:0;border-bottom:0}
+.cur__box .tr{right:0;top:0;border-left:0;border-bottom:0}
+.cur__box .bl{left:0;bottom:0;border-right:0;border-top:0}
+.cur__box .br{right:0;bottom:0;border-left:0;border-top:0}
+
+/* ---------- Buttons: label rolls like a cube on hover ---------- */
+.btn{perspective:420px}
+html.motion .btn{transition:background .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease}
+.btn__roll{display:inline-grid;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.btn__f,.btn__b{grid-area:1/1;display:inline-flex;align-items:center;gap:9px;height:1.5em;line-height:1.5em;backface-visibility:hidden}
+.btn__f{transform:translateZ(.75em)}
+.btn__b{transform:rotateX(-90deg) translateZ(.75em)}
+.btn:hover .btn__roll{transform:rotateX(90deg)}
+.btn-primary:hover{background:var(--ink)}
+.btn-secondary:hover{background:var(--orange);border-color:var(--orange)}
+
+/* ---------- Hero ---------- */
+.hero{padding:calc(var(--header-h) + clamp(24px,5vh,56px)) 0 clamp(40px,6vw,80px);text-align:center}
+.hero .eyebrow{justify-content:center}
+.hero .hero__title{font-size:clamp(34px,4.8vw,62px);font-weight:800;line-height:1.06;max-width:19ch;margin:0 auto}
+.hero__title .hl{color:var(--orange)}
+.hero__support{margin:18px auto 0;font-size:clamp(16px,1.5vw,19px);color:var(--grey);max-width:560px}
+.hero__cta{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin-top:26px}
+
+.lens-wrap{position:relative;z-index:6;width:min(820px,84vw);margin:clamp(26px,4.5vh,48px) auto 0;transform-origin:50% 42%}
+.lens{position:relative;aspect-ratio:820/170;container-type:inline-size}
+.lens__glass{position:absolute;inset:0;background-color:var(--dark);
+  background-image:radial-gradient(70% 140% at 18% 125%,rgba(242,106,27,.95),transparent 60%),radial-gradient(60% 120% at 88% -25%,rgba(246,178,107,.85),transparent 62%),repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 26px),repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 26px);
+  clip-path:polygon(0 0,100% 0,100% 100%,61% 100%,56.5% 64%,43.5% 64%,39% 100%,0 100%);overflow:hidden;box-shadow:inset 0 0 0 5px #0d0b08}
+.lens__word{position:absolute;inset:0 0 18% 0;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:15cqw;letter-spacing:.08em;line-height:1;color:#fff;padding-left:.08em}
+.lens__scan{position:absolute;top:0;bottom:0;left:-30%;width:26%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);animation:lensScan 3.8s ease-in-out infinite}
+@keyframes lensScan{0%,35%{left:-30%}75%,100%{left:110%}}
+
+.stage{position:relative;z-index:1;margin-top:clamp(36px,7vh,80px);padding-top:clamp(36px,6vw,76px)}
+.stage__bg{position:absolute;left:0;right:0;top:0;bottom:0;border-radius:28px 28px 0 0;background:radial-gradient(90% 80% at 50% 100%,var(--orange) 0%,rgba(242,106,27,.55) 38%,transparent 72%),linear-gradient(180deg,var(--orange-soft),#F8D3B4)}
+.stage__line{position:absolute;top:44%;z-index:3;font-family:var(--font-head);font-weight:800;font-size:clamp(20px,2.3vw,32px);line-height:1.12;letter-spacing:-.02em;color:var(--ink);text-align:left}
+.stage__line--l{left:4%}
+.stage__line--r{right:4%;text-align:right}
+.stage__media{position:relative;z-index:2;width:46%;margin:0 auto;aspect-ratio:1034/1200}
+.stage__photo{position:absolute;inset:0;border-radius:24px 24px 0 0;overflow:hidden}
+.stage__photo img{width:100%;height:100%;object-fit:cover}
+.rings{position:absolute;inset:0;pointer-events:none;z-index:3}
+.ring{position:absolute;left:51.3%;top:29.8%;aspect-ratio:1;border-radius:50%}
+.ring.r1{width:46%;margin:-23% 0 0 -23%;border:2px solid var(--orange)}
+.ring.r2{width:78%;margin:-39% 0 0 -39%;border:1.5px dashed rgba(255,255,255,.75)}
+.ring.r3{width:112%;margin:-56% 0 0 -56%;border:1px solid rgba(255,255,255,.4)}
+.stage .hero-card{z-index:4;text-align:left}
+.hero__after{padding-top:28px}
+.hero__after .hero-proof{margin-top:0}
+.hero__after .add-line{margin:8px auto 0;font-size:15px;color:var(--grey);max-width:560px}
+@media(max-width:900px){
+  .stage__line{display:none}
+  .stage__media{width:84%}
+  .stage .hero-card{right:10px;bottom:12px;padding:12px 14px}
+}
+@media(max-width:560px){.stage .hero-card{position:absolute;margin:0}}
+
+/* ---------- Marquee (motion: GSAP loop that reacts to scroll speed) ---------- */
+html.motion .marquee-track{animation:none}
+
+/* ---------- Numbers ---------- */
+.numbers.is-pinned{min-height:100vh;display:flex;align-items:center}
+.numbers.is-pinned > .wrap{width:100%}
+.stat .num{font-size:clamp(46px,6.4vw,84px)}
+.stat{border-top:2px solid var(--ink);padding-top:18px}
+
+/* ---------- Manifesto ---------- */
+.manifesto{position:relative;min-height:100vh;display:flex;align-items:center;padding-block:clamp(80px,12vh,140px)}
+.manifesto__inner{position:relative;width:100%}
+.manifesto__copy{font-family:var(--font-head);font-weight:700;font-size:clamp(26px,3.3vw,46px);line-height:1.2;letter-spacing:-.02em;color:var(--cream);max-width:24ch;max-width:1000px}
+.manifesto__copy .mf-1{color:var(--orange)}
+.manifesto__copy .mf-2{color:var(--amber)}
+.manifesto__final{display:none}
+.manifesto.is-pinned .manifesto__final{display:flex;position:absolute;inset:0;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:.35em;font-family:var(--font-head);font-size:clamp(28px,4vw,58px);line-height:1.08;letter-spacing:-.025em;padding-inline:var(--gutter);pointer-events:none}
+.manifesto__final .mf-n1{color:var(--orange);font-weight:800;max-width:24ch}
+.manifesto__final .mf-n2{color:var(--amber);font-weight:800}
+
+/* ---------- Dark sections: cards ---------- */
+[data-bg="dark"] .section-head h2,[data-bg="dark"] h2,[data-bg="dark"] h3,[data-bg="dark"] h4{color:#fff}
+[data-bg="dark"] .qcard,[data-bg="dark"] .area{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.1)}
+[data-bg="dark"] .qcard p,[data-bg="dark"] .area h4{color:#fff}
+[data-bg="dark"] .area p{color:rgba(255,255,255,.6)}
+[data-bg="dark"] .qico,[data-bg="dark"] .area .ico{background:rgba(242,106,27,.16)}
+html.motion .qcard,html.motion .area,html.motion .opt,html.motion .step,html.motion .trust{transition:box-shadow .25s ease,border-color .25s ease}
+html.motion .qcard:hover,html.motion .area:hover,html.motion .opt:hover{transform:none}
+
+/* ---------- Film (audit) ---------- */
+.film{position:relative;display:flex;flex-direction:column;align-items:center;padding-block:clamp(40px,8vh,90px)}
+.film__probe{width:var(--cw);height:0}
+.film__media{position:relative;width:var(--cw);height:100vh;height:100svh;border-radius:20px;overflow:hidden;background:#000}
+.film__media > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.film__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,21,16,.15),rgba(25,21,16,.45))}
+.film__panel{position:absolute;top:0;right:0;bottom:0;width:min(46%,600px);display:flex;flex-direction:column;justify-content:center;gap:18px;padding:clamp(28px,5vw,72px);background:rgba(25,21,16,.42);-webkit-backdrop-filter:blur(22px) saturate(140%);backdrop-filter:blur(22px) saturate(140%);border-left:1px solid rgba(255,255,255,.12)}
+.film__kicker{font-family:var(--font-head);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+.film__panel h2{font-size:clamp(26px,2.8vw,40px);font-weight:800;line-height:1.12;letter-spacing:-.02em;text-transform:none}
+.film__panel p{font-size:clamp(15px,1.25vw,17px);line-height:1.6}
+.film__goal strong{font-family:var(--font-head);font-weight:800}
+.film__panel .btn{align-self:flex-start;margin-top:8px}
+.reveal{--p:115%;background-image:linear-gradient(90deg,#fff 0 var(--p),rgba(255,255,255,.26) calc(var(--p) + 14%));-webkit-background-clip:text;background-clip:text;color:transparent}
+@media(max-width:900px){
+  .film__media{height:auto;border-radius:16px;background:var(--dark)}
+  .film__media > img{position:relative;aspect-ratio:4/3;height:auto}
+  .film__shade{display:none}
+  .film__panel{position:relative;width:100%;background:rgba(255,255,255,.04);border-left:0;border-top:1px solid rgba(255,255,255,.1)}
+}
+
+/* ---------- Options: scattered cards gather ---------- */
+.options.is-pinned{min-height:100vh;display:flex;align-items:center}
+.options.is-pinned > .wrap{width:100%}
+.opts{position:relative;border-radius:22px;padding:14px;margin:-14px}
+
+/* ---------- Process: cards dealt from a hand ---------- */
+.process.is-pinned{min-height:100vh;display:flex;align-items:center}
+.process.is-pinned > .wrap{width:100%}
+.steps{position:relative}
+.step{will-change:transform}
+
+/* ---------- Image frames ---------- */
+.imgframe img.frame-img{will-change:transform}
+
+/* ---------- Final CTA ---------- */
+.final-grid{grid-template-columns:1fr;text-align:center;justify-items:center}
+.finalcta .eyebrow{justify-content:center;font-size:clamp(40px,7vw,96px);line-height:1}
+.finalcta .eyebrow::before{display:none}
+.finalcta h2{font-size:12.5px}
+.finalcta p{margin-inline:auto}
+.final-img{display:none}
+</style>
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <img src="/images/logo.png" alt="">
+  <div class="ld__bar"><i></i></div>
+</div>
+
+<div class="cur" aria-hidden="true">
+  <i class="cur__dot"></i>
+  <div class="cur__box"><b class="tl"></b><b class="tr"></b><b class="bl"></b><b class="br"></b></div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Sangeetha S Abishek — Marketing Consultant">
+      <img src="/images/logo.png" alt="Sangeetha S Abishek — Marketing Consultant" class="brand-logo" width="178" height="36">
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+      <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="/about.html">About</a>
+      <a href="/marketing-consulting.html">Marketing Consulting</a>
+      <a href="#branding">Personal Branding</a>
+      <a href="/blog">Blog</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary header-cta">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO: the CLARITY lens lands on the portrait ================= -->
+<section class="hero" data-bg="cream">
+  <div class="wrap">
+    <p class="eyebrow hero__eyebrow">Marketing Consultant and Fractional CMO</p>
+    <h1 class="hero__title" data-wave>Spending on marketing, but still unsure what is <span class="hl">actually working?</span></h1>
+<div class="hero__fade">
+    <p class="hero__support">We help you understand what is worth continuing, what needs fixing and what should come next.</p>
+    <div class="hero__cta">
+      <a href="#contact" class="btn btn-primary btn-lg" data-magnetic>Request a 15-Minute Consultation <span class="arrow">→</span></a>
+      <a href="#audit" class="btn btn-ghost">See How We Can Help <span class="arrow">→</span></a>
+    </div>
+    </div>
+  </div>
+
+  <div class="lens-wrap" aria-hidden="true">
+    <div class="lens">
+      <div class="lens__glass"><span class="lens__word">CLARITY</span><i class="lens__scan"></i></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stage">
+      <div class="stage__bg"></div>
+      <p class="stage__line stage__line--l">Look at the<br>complete picture.</p>
+      <p class="stage__line stage__line--r">Then decide<br>what to change.</p>
+      <div class="stage__media">
+        <div class="stage__photo"><img src="/images/photos/hero.jpg" alt="Sangeetha S Abishek, Marketing Consultant" style="object-position:center 20%"></div>
+        <div class="rings" aria-hidden="true"><i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i></div>
+        <div class="hero-card">
+          <div class="hcn">Sangeetha S Abishek</div>
+          <div class="hcr">Marketing Consultant</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__after">
+      <p class="hero-proof">19+ years of experience <span class="sep">·</span> 200+ brands <span class="sep">·</span> 960+ projects</p>
+      <p class="add-line">Marketing audits, strategy and ongoing consulting for established retail, e-commerce and consumer businesses.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LOGO MARQUEE ================= -->
+<section class="marquee-sec" aria-label="Client brands" data-bg="card">
+  <p class="cap">Trusted by businesses across retail, e-commerce and consumer sectors</p>
+  <div class="marquee">
+    <div class="marquee-track" id="mtrack">
+      <span class="logo-item"><img src="/images/clients/pothys.png" alt="Pothys" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/pachaiyappas-silks.png" alt="Pachaiyappas Silks" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/kankatala.png" alt="Kankatala" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/rangvarsha-sarees.png" alt="Rangvarsha Sarees" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/prashanthi-tradition-for-generations.png" alt="Prashanti Sarees" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/mahaveers.png" alt="Mahaveers — The Silk People" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/deiveegaa.png" alt="Deiveegaa" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/rani-arts-teak.png" alt="Rani Arts &amp; Teak" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/naturals.png" alt="Naturals" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/manna.png" alt="Manna" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/palmshore.png" alt="Palmshore" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/pmk-scans-labs.png" alt="PMK Scans &amp; Labs" loading="lazy"></span>
+      <span class="logo-item"><img src="/images/clients/xlri.png" alt="XLRI" loading="lazy"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NUMBERS: pinned, figures count up ================= -->
+<section class="section numbers" id="numbers" data-bg="cream">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Experience</p>
+      <h2>The recommendations come from years of real work.</h2>
+    </div>
+    <div class="stats-wrap">
+      <div class="stats">
+        <div class="stat"><div class="num" data-to="19" data-suffix="+">19+</div><div class="lab">Years</div><p class="desc">Of marketing and business experience</p></div>
+        <div class="stat"><div class="num" data-to="200" data-suffix="+">200+</div><div class="lab">Brands</div><p class="desc">Worked with across industries</p></div>
+        <div class="stat"><div class="num" data-to="960" data-suffix="+">960+</div><div class="lab">Projects</div><p class="desc">Across marketing, content and digital growth</p></div>
+        <div class="stat"><div class="num" data-to="4000" data-suffix="+">4,000+</div><div class="lab">Trained</div><p class="desc">Entrepreneurs and students</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MANIFESTO: the real question, word by word ================= -->
+<section class="manifesto" id="problem" data-bg="dark">
+  <div class="wrap manifesto__inner">
+    <p class="eyebrow manifesto__eyebrow">The Real Question</p>
+    <p class="manifesto__copy">You may already be doing a lot of marketing. A marketing team, social media, advertising, a website, e-commerce, videos, content and influencer activity. But the problem is rarely just social media, ads or your website. <span class="mf-1">It is usually how all of them are working together.</span> That is why <span class="mf-2">we look at the complete picture</span> before deciding what needs to change.</p>
+    <div class="manifesto__final" aria-hidden="true">
+      <strong class="mf-n1">It is usually how all of them are working together.</strong>
+      <strong class="mf-n2">We look at the complete picture.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUESTIONS ================= -->
+<section class="section questions" data-bg="dark">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>But are we doing the right things?</p>
+      <h2>The questions business owners ask us</h2>
+    </div>
+    <div class="card-grid" data-rise>
+      <div class="qcard"><div class="qico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><p>Why aren't our sales growing as expected?</p></div>
+      <div class="qcard"><div class="qico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v8"/></svg></div><p>Are we spending our marketing budget in the right places?</p></div>
+      <div class="qcard"><div class="qico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><p>Is our social media actually helping the business?</p></div>
+      <div class="qcard"><div class="qico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 8h20M6 21h12"/></svg></div><p>Is our website converting enough customers?</p></div>
+      <div class="qcard"><div class="qico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><p>Is our marketing team moving in the right direction?</p></div>
+      <div class="qcard"><div class="qico"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div><p>What should we focus on next?</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARKETING AUDIT: film-style pinned panel ================= -->
+<section class="film" id="audit" data-bg="dark">
+  <div class="film__probe" aria-hidden="true"></div>
+  <div class="film__media">
+    <img src="/images/photos/audit.jpg" alt="Sangeetha reviewing marketing and reports with her team">
+    <div class="film__shade"></div>
+    <div class="film__panel">
+      <p class="film__kicker">Marketing Audit &amp; Strategy</p>
+      <h2 class="reveal">Before deciding what to do next, understand what is happening now.</h2>
+      <p class="reveal">We look at marketing as a complete system rather than treating your website, content, advertising and social media as unrelated activities.</p>
+      <p class="reveal film__goal"><strong>The goal is simple.</strong> Understand where you are, identify the gaps and create a clear plan for what should happen next.</p>
+      <a href="#contact" class="btn btn-primary">Request a 15 min consulting call</a>
+    </div>
+  </div>
+</section>
+
+<section class="section areas-sec" data-bg="dark">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>What the review covers</p>
+      <h2>Depending on the business, the review may cover:</h2>
+    </div>
+    <div class="audit-areas" data-rise>
+      <div class="area"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg></div><h4>Brand &amp; Positioning</h4><p>Who are you trying to become in your customer's mind?</p></div>
+      <div class="area"><div class="ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h4>Customers &amp; Competitors</h4><p>Who are you really selling to, and what alternatives do they weigh?</p></div>
+      <div class="area"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h4>Social Media &amp; Content</h4><p>Are you creating content that supports the business?</p></div>
+      <div class="area"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 8h20M6 21h12"/></svg></div><h4>Website &amp; E-commerce</h4><p>Is your digital experience helping customers buy?</p></div>
+      <div class="area"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h4>Advertising</h4><p>Are you spending money in the right places?</p></div>
+      <div class="area"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><h4>Analytics &amp; Performance</h4><p>What do the numbers actually tell us?</p></div>
+      <div class="area"><div class="ico"><svg viewBox="0 0 24 24"><path d="M18 21a6 6 0 0 0-12 0"/><circle cx="12" cy="7" r="4"/><path d="M3 21h18"/></svg></div><h4>Team &amp; Processes</h4><p>Does your team have the right people, skills and direction?</p></div>
+      <div class="area"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div><h4>Founder / Personal Brand</h4><p>Should the founder become more visible and trusted?</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONSULTING OPTIONS: scattered cards gather ================= -->
+<section class="section options" id="options" data-bg="cream">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Consulting Options</p>
+      <h2>Different businesses need different levels of support.</h2>
+    </div>
+    <div class="opts">
+      <div class="opt">
+        <div class="otop">
+          <div class="oico"><svg viewBox="0 0 24 24"><path d="M9 11H5a2 2 0 0 0-2 2v7h6zM15 7h-6v13h6zM21 3h-4a2 2 0 0 0-2 2v15h6z"/></svg></div>
+          <div class="onum">01</div>
+        </div>
+        <h3>Complete Marketing Audit &amp; Strategy</h3>
+        <p class="otag">4–6 week consulting engagement</p>
+        <p class="odesc">A detailed review of the business's marketing followed by a clear strategy and action plan. Best for businesses that need to step back, understand the bigger picture and identify what needs to change.</p>
+        <a href="/marketing-consulting.html#marketing-audit-strategy" class="btn btn-ghost">Learn More <span class="arrow">→</span></a>
+      </div>
+      <div class="opt">
+        <div class="otop">
+          <div class="oico"><svg viewBox="0 0 24 24"><path d="M12 20v-6M6 20V10M18 20V4"/></svg></div>
+          <div class="onum">02</div>
+        </div>
+        <h3>Ongoing Marketing Consulting</h3>
+        <p class="otag">Strategic support while your team executes</p>
+        <p class="odesc">For businesses that want continued strategic guidance while their internal team, agency or freelancers implement the work.</p>
+        <ul class="act">
+          <li>Strategy reviews</li>
+          <li>Content, advertising &amp; campaign reviews</li>
+          <li>Performance reviews</li>
+          <li>Team discussions &amp; decision support</li>
+          <li>Correcting direction when needed</li>
+        </ul>
+        <a href="/marketing-consulting.html#ongoing-consulting" class="btn btn-ghost">Learn More <span class="arrow">→</span></a>
+      </div>
+      <div class="opt">
+        <div class="otop">
+          <div class="oico"><svg viewBox="0 0 24 24"><circle cx="11" cy="8" r="4"/><path d="M15 12a5 5 0 0 1 5 5v1H6v-1a5 5 0 0 1 5-5"/><path d="m17 3 1.5 1.5L21 2"/></svg></div>
+          <div class="onum">03</div>
+        </div>
+        <h3>Monthly Marketing Review</h3>
+        <p class="otag">An experienced second opinion</p>
+        <p class="odesc">For businesses that already have execution in place but want Sangeetha to periodically review the marketing, performance and upcoming decisions.</p>
+        <a href="/marketing-consulting.html#monthly-marketing-review" class="btn btn-ghost">Learn More <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY WORK WITH US ================= -->
+<section class="section" id="why" data-bg="card">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Why Work With Us</p>
+      <h2>Strategy that makes sense outside a presentation too.</h2>
+    </div>
+    <div class="trust-grid" data-rise>
+      <div class="trust"><div class="ico"><svg viewBox="0 0 24 24"><path d="m2 7 2-4h16l2 4M4 7v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7M2 7h20"/></svg></div><h3>Business First</h3><p>Marketing recommendations should make sense for the business, not just for the platform.</p></div>
+      <div class="trust"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6"/></svg></div><h3>Strategy + Execution Experience</h3><p>We understand both what a strategy should say and what happens when a real team has to implement it.</p></div>
+      <div class="trust"><div class="ico"><svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Independent Perspective</h3><p>We can step outside the day-to-day activity and look at the complete marketing picture.</p></div>
+      <div class="trust"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2Z"/></svg></div><h3>Simple, Practical Direction</h3><p>No complicated marketing language for the sake of sounding impressive. You should understand what to do and why.</p></div>
+      <div class="trust"><div class="ico"><svg viewBox="0 0 24 24"><path d="M18 21a6 6 0 0 0-12 0"/><circle cx="12" cy="7" r="4"/><path d="M3 21h18"/></svg></div><h3>Works With Your Existing Team</h3><p>You don't have to replace your agency, employees or freelancers. We can work with the people already executing your marketing.</p></div>
+      <div class="trust"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21V7l9-4 9 4v14"/><path d="M3 21h18M9 21v-6h6v6M9 10h.01M15 10h.01"/></svg></div><h3>Experience Across Real Businesses</h3><p>Years of working with retailers, e-commerce brands, entrepreneurs and consumer businesses shape the recommendations.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PERSONAL BRANDING ================= -->
+<section class="section" id="branding" data-bg="deep">
+  <div class="wrap">
+    <div class="pb-grid">
+      <div class="imgframe pb-img" data-parallax>
+        <img class="frame-img" src="/images/photos/branding.jpg" alt="Sangeetha teaching a workshop session">
+      </div>
+      <div class="pb-copy">
+        <p class="eyebrow" data-reveal>Founder &amp; Personal Branding</p>
+        <h2>Become known for the right things.</h2>
+        <p>Customers increasingly want to hear directly from founders and experts. But building a personal brand is not about copying every viral trend or becoming someone you are not.</p>
+        <p>We help founders, business owners, doctors, professionals and experts decide:</p>
+        <ul class="pb-list" data-rise>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What they should talk about</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What they want to be known for</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Which platforms matter</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>How they should communicate</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What content suits their personality</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>What the team should and shouldn't publish</li>
+        </ul>
+        <div class="pb-highlight">
+          <p class="big" data-words>The objective is not simply to become popular. It is to become trusted.</p>
+          <div class="out"><span>Customer trust</span><span>Sales</span><span>Industry recognition</span></div>
+          <p class="pb-note">Secondary outcomes: speaking engagements, collaborations and media visibility. For specialist clients such as doctors, the client approves all subject-specific facts before anything is published.</p>
+        </div>
+        <a href="#contact" class="btn btn-secondary">Explore Personal Branding</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about" data-bg="card">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="imgframe about-img" data-parallax data-clip>
+        <img class="frame-img" src="/images/photos/about.jpg" alt="Sangeetha S Abishek speaking at an event" style="object-position:center top">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow" data-reveal>About Sangeetha</p>
+        <h2>Marketing Consultant. Entrepreneur. Educator.</h2>
+        <p>I co-founded SODME Digital Marketing in 2014 and have spent more than a decade working with businesses across digital marketing, content, advertising, e-commerce and brand growth.</p>
+        <p>My experience across entrepreneurship, consulting and teaching shapes the way I look at marketing.</p>
+        <div class="quoteblock">
+          <p class="q">I don't begin by asking: <em>"What should we post?"</em></p>
+          <p class="q strong" data-words>I begin with: "What is the business trying to achieve, and what needs to change for marketing to help us get there?"</p>
+        </div>
+        <a href="#contact" class="btn btn-secondary">Request a 15 min consulting call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS: cards dealt one by one ================= -->
+<section class="section process" id="process" data-bg="cream">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>The First Step</p>
+      <h2>Start with a 15-minute conversation.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="snum">01</div><h3>Send Your Details</h3><div class="step__body"><p>Tell us briefly about your business and the problem you are facing.</p></div></div>
+      <div class="step"><div class="snum">02</div><h3>15-Minute Consultation</h3><div class="step__body"><p>Sangeetha speaks with you to understand the business, the broad challenge and whether there is a mutual fit. It's also your chance to understand her approach.</p><p class="muted">This is not the full consulting session.</p></div></div>
+      <div class="step"><div class="snum">03</div><h3>Recommended Approach</h3><div class="step__body"><p>If there is a fit, Sangeetha recommends the type of consulting support that makes sense for you.</p></div></div>
+      <div class="step"><div class="snum">04</div><h3>Detailed Proposal</h3><div class="step__body"><p>You receive a proposal explaining scope, process, deliverables, commercial terms and next steps.</p></div></div>
+    </div>
+    <div class="process-cta"><a href="#contact" class="btn btn-primary btn-lg" data-magnetic>Request a 15-Minute Consultation <span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / FORM ================= -->
+<section class="section" id="contact" data-bg="deep">
+  <div class="wrap">
+    <div class="form-grid">
+      <div class="form-side">
+        <p class="eyebrow" data-reveal>Request a Consultation</p>
+        <h2>Request a 15-Minute Consultation</h2>
+        <p class="fp">You don't need to diagnose the problem before speaking to us. Tell us where your business is today and what you are trying to solve.</p>
+        <ul class="whatlist" data-rise>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A short, no-pressure conversation to understand your business.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>A chance to see whether there is a mutual fit.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Our team will contact you directly to arrange the call.</li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <form id="consultForm" novalidate>
+          <div class="field"><label for="f-name">Your Name <span class="req">*</span></label><input type="text" id="f-name" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="f-company">Company / Brand Name <span class="req">*</span></label><input type="text" id="f-company" name="company" required autocomplete="organization"></div>
+          <div class="field"><label for="f-phone">Phone / WhatsApp Number <span class="req">*</span></label><input type="tel" id="f-phone" name="phone" required autocomplete="tel" inputmode="tel"></div>
+          <div class="field"><label for="f-web">Website / Instagram</label><input type="text" id="f-web" name="website" autocomplete="url"></div>
+          <div class="field"><label for="f-about">Tell us briefly about your business</label><textarea id="f-about" name="about"></textarea></div>
+          <div class="field"><label for="f-challenge">What is the main marketing challenge you are facing, and what would you like help with? <span class="req">*</span></label><textarea id="f-challenge" name="challenge" required></textarea></div>
+          <input type="hidden" name="_subject" value="New consultation request — SSA website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_cc" value="deepika@sodme.in">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="hpot" aria-hidden="true"><label>Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+          <button type="submit" class="btn btn-primary btn-lg">Request a Consultation <span class="arrow">→</span></button>
+          <p class="form-note">Phone / WhatsApp is essential — our team will contact you directly.</p>
+        </form>
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+          <div class="check"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>Thank you.</h3>
+          <p>Our team will contact you to arrange the 15-minute consultation call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section section--dark" data-bg="dark">
+  <div class="wrap">
+    <div class="final-grid">
+      <div class="finalcta">
+        <p class="eyebrow" data-wave>Let's Create What's Next</p>
+        <h2>Not sure what is wrong with your marketing?</h2>
+        <p>You don't need to diagnose the problem before speaking to us. Tell us where your business is today and what you are trying to solve.</p>
+        <a href="#contact" class="btn btn-primary btn-lg" data-magnetic>Request a 15-Minute Consultation <span class="arrow">→</span></a>
+        <p class="fine">Our team will contact you to arrange the call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="fbrand"><span class="bn">Sangeetha S Abishek<span class="dot">.</span></span></div>
+        <p class="ftag">Marketing Consultant | Entrepreneur | Educator</p>
+        <p class="frel">Co-founder, SODME Digital Marketing Pvt. Ltd.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/sangeethasabishek/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+          <a href="https://www.youtube.com/@sangeethasabishek" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22 8.6a3 3 0 0 0-2.1-2.1C18 6 12 6 12 6s-6 0-7.9.5A3 3 0 0 0 2 8.6 31 31 0 0 0 1.5 12a31 31 0 0 0 .5 3.4 3 3 0 0 0 2.1 2.1C6 18 12 18 12 18s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-3.4 31 31 0 0 0-.5-3.4Z"/><path d="m10 15 5-3-5-3z"/></svg></a>
+          <a href="https://www.linkedin.com/in/sangeetha-s-abishek/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="/about.html">About</a></li><li><a href="/marketing-consulting.html">Marketing Consulting</a></li><li><a href="/blog">Blog</a></li></ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul><li><a href="#branding">Personal Branding</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="yr"></span> Sangeetha S Abishek. All rights reserved.</span>
+      <span class="legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BASE BEHAVIOUR (same as the live homepage) ================= -->
+<script>
+  var toggle=document.getElementById('navToggle'),nav=document.getElementById('nav');
+  toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});
+
+  var track=document.getElementById('mtrack');
+  if(track){track.innerHTML+=track.innerHTML;}
+
+  var form=document.getElementById('consultForm'),success=document.getElementById('formSuccess');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true;
+    form.querySelectorAll('[required]').forEach(function(el){
+      if(!el.value.trim()){ok=false;el.style.borderColor='#d33';}else{el.style.borderColor='';}
+    });
+    if(!ok)return;
+    var btn=form.querySelector('button[type="submit"]');btn.disabled=true;btn.textContent='Sending…';
+    var done=false;
+    function showSuccess(){if(done)return;done=true;form.style.display='none';success.classList.add('show');success.scrollIntoView({behavior:'smooth',block:'center'});if(window.gtag)gtag('event','generate_lead',{form:'homepage'});try{fetch('/api/lead-conversion',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({event_id:(window.crypto&&crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2)),source_url:location.href,timestamp_ms:Date.now()})}).catch(function(){});}catch(e){}}
+    fetch('https://formsubmit.co/ajax/sangeetha@sodme.in',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form),keepalive:true}).then(showSuccess).catch(showSuccess);
+    setTimeout(showSuccess,1000);
+  });
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+
+<!-- ================= MOTION ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="/newani/motion.js?v=6"></script>
+</body>
+</html>
