@@ -1,5 +1,5 @@
 /* =====================================================================
-   newani: motion layer for the homepage
+   Homepage motion layer
    GSAP + ScrollTrigger + Lenis. Skipped entirely for prefers-reduced-motion,
    in which case the page shows its normal static layout.
 ===================================================================== */

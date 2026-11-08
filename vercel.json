@@ -15,6 +15,16 @@
       "source": "/blog/ai-marketing-guide",
       "destination": "/blog/how-to-use-ai-for-marketing",
       "permanent": true
+    },
+    {
+      "source": "/newani",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/newani/(.*)",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
