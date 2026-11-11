@@ -412,7 +412,12 @@ html.motion .marquee-sec{background:transparent}
 .header.is-pill{top:12px}
 .header.is-pill .wrap{max-width:min(1080px,calc(100% - 24px));height:64px;background:rgba(247,242,233,.86);-webkit-backdrop-filter:saturate(150%) blur(14px);backdrop-filter:saturate(150%) blur(14px);border-radius:var(--pill);border-color:var(--border);box-shadow:0 10px 30px rgba(25,21,16,.10);padding-inline:clamp(18px,2.4vw,28px)}
 .header .brand-logo{height:36px}
-@media(max-width:1240px){.nav.open{top:calc(100% + 8px);border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--shadow-hover)}}
+/* header "Book a call" keeps button colours (plain menu link styles would otherwise win) */
+.nav .header-cta,.nav .header-cta:hover{color:#fff}
+@media(max-width:1240px){
+  .nav.open{top:calc(100% + 8px);left:12px;right:12px;border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--shadow-hover)}
+  .nav.open .header-cta{width:100%;justify-content:center;padding:14px 24px;margin-top:16px;border-bottom:0}
+}
 
 /* ---------- Cursor: dot + four corner brackets ---------- */
 .cur{display:none}
